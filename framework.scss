@@ -1,0 +1,103 @@
+$colors: (
+  backgrounds-color: #fff,
+  navigation-color: #fff,
+  container-color: #fff,
+  texts-color: #fff,
+  light-texts-color: #fff,
+  alt-texts-color: #fff,
+  white-texts: #fff,
+  links-color: #fff,
+  alerts-color: #fff,
+  buttons-color: #fff,
+  buttons-text-color: #fff,
+  hovers-color: #fff,
+  borders-color: #fff,
+  shadows-color: #fff,
+);
+
+
+/* Margins */
+$margin: (
+  thin: 1em,
+  regular: 2em,
+  thick: 3em,
+  no-top-thin: 0 1em 1em 1em,
+  no-top-regular: 0 2em 2em 2em,
+  no-top-thick: 0 3em 3em 3em,
+  no-right-thin: 1em 0 1em 1em,
+  no-right-regular: 2em 0 2em 2em,
+  no-right-thick: 3em 0 3em 3em,
+  no-bottom-thin: 1em 1em 0 1em,
+  no-bottom-regular: 2em 2em 0 2em,
+  no-bottom-thick: 3em 3em 0 3em,
+  no-left-thin: 1em 1em 1em 0,
+  no-left-regular: 2em 2em 2em 0,
+  no-left-thick: 3em 3em 3em 0,
+  top-only-thin: 1em 0 0 0,
+  top-only-regular: 2em 0 0 0,
+  top-only-thick: 3em 0 0 0,
+  right-only-thin: 0 1em 0 0,
+  right-only-regular: 0 2em 0 0,
+  right-only-thick: 0 3em 0 0,
+  bottom-only-thin: 0 0 1em 0,
+  bottom-only-regular: 0 0 2em 0,
+  bottom-only-thick: 0 0 3em 0,
+  left-only-thin: 0 0 0 1em,
+  left-only-regular: 0 0 0 2em,
+  left-only-thick: 0 0 0 3em,
+  vertical-thin: 1em 0,
+  vertical-regular: 2em 0,
+  vertical-thick: 3em 0,
+  horizontal-thin: 0 1em,
+  horizontal-regular: 0 2em,
+  horizontal-thick: 0 3em
+);
+
+/* Padding */ 
+$padding: (
+  thin: 1em,
+  regular: 2em,
+  thick: 3em,
+  no-top-thin: 0 1em 1em 1em,
+  no-top-regular: 0 2em 2em 2em,
+  no-top-thick: 0 3em 3em 3em,
+  no-right-thin: 1em 0 1em 1em,
+  no-right-regular: 2em 0 2em 2em,
+  no-right-thick: 3em 0 3em 3em,
+  no-bottom-thin: 1em 1em 0 1em,
+  no-bottom-regular: 2em 2em 0 2em,
+  no-bottom-thick: 3em 3em 0 3em,
+  no-left-thin: 1em 1em 1em 0,
+  no-left-regular: 2em 2em 2em 0,
+  no-left-thick: 3em 3em 3em 0,
+  top-only-thin: 1em 0 0 0,
+  top-only-regular: 2em 0 0 0,
+  top-only-thick: 3em 0 0 0,
+  right-only-thin: 0 1em 0 0,
+  right-only-regular: 0 2em 0 0,
+  right-only-thick: 0 3em 0 0,
+  bottom-only-thin: 0 0 1em 0,
+  bottom-only-regular: 0 0 2em 0,
+  bottom-only-thick: 0 0 3em 0,
+  left-only-thin: 0 0 0 1em,
+  left-only-regular: 0 0 0 2em,
+  left-only-thick: 0 0 0 3em,
+  vertical-thin: 1em 0,
+  vertical-regular: 2em 0,
+  vertical-thick: 3em 0,
+  horizontal-thin: 0 1em,
+  horizontal-regular: 0 2em,
+  horizontal-thick: 0 3em
+);
+
+/* Fonts */ 
+
+/* Images */ 
+
+/* Containers */
+
+.ugly-button {
+  background-color: map-get($colors, button-color);
+  margin: map-get($margin, thick);
+  padding: map-get($padding, thin);
+}

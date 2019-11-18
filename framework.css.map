@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAgBA,aAAa;AAqCb,aAAa;AAqCb,WAAW;AAEX,YAAY;AAEZ,gBAAgB;AAEhB,AAAA,YAAY,CAAC;EACX,gBAAgB,EAvFF,IAAI;EAwFlB,MAAM,EA9EC,GAAG;EA+EV,OAAO,EA5CD,GAAG;CA6CV",
+    "sources": [
+        "framework.scss"
+    ],
+    "names": [],
+    "file": "framework.css"
+}
