@@ -20,7 +20,7 @@ $gap-size-mobile: 1em;
 
 $colors: (
   backgrounds-color: #fff,
-  cards-background-color: #fff,
+  cardss-background-color: #fff,
   navigation-color: #fff,
   container-color: #fff,
   texts-color: #fff,
@@ -34,6 +34,10 @@ $colors: (
   hovers-color: #fff,
   borders-color: #fff,
   shadows-color: #fff,
+  single-cards-border-color: #fff
+  grid-menu-color: #fff,
+  grid-menu-color-hover: #fff,
+  grid-menu-color-active: #fff
 );
 
 /* Margins */
@@ -110,11 +114,30 @@ $padding: (
   horizontal-thick: 0 $thick
 );
 
-/* card setup */
-$card-border-radius: 4px;
-$card-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-$card-box-shadow-hover: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
-$cards-height: 5em;
+/* cards setup */
+$cards-border-radius: 4px;
+$cards-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+$cards-box-shadow-hover: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
+$cardss-height: 5em;
+$single-cards-border-width: 1px;
+
+/* Grid */
+@mixin body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin grid-0-12-0 {
+grid-column: 1 / 13;
+}
+
+@mixin grid-1-10-1 {
+  grid-column: 2 /12;
+}
+
+@mixin grid-2-8-2 {
+  grid-column: 3/11;
+}
 
 /* Fonts */
 
@@ -146,17 +169,29 @@ $cards-height: 5em;
 
 /* Images */
 
+@mixin single-cards-img {
+  width: 100%;
+  height: auto;
+  border-bottom: $single-cards-border-width map-get(colors, single-cards-border-color) solid;
+}
+
+@mixin double-cards-img {
+  width: auto;
+  height: 100%;
+}
+
+
 /* Containers */
   @mixin line-of-two {
     @media (min-width: 1025px) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: $gap-size;
     }
 
     @media (max-width: 1024px) {
       display: grid;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr;
       grid-gap: $gap-size-mobile;
     }
   }
@@ -164,13 +199,13 @@ $cards-height: 5em;
   @mixin line-of-three {
     @media (min-width: 1025px) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: $gap-size;
     }
 
     @media (max-width: 1024px) {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
       grid-gap: $gap-size-mobile;
     }
   }
@@ -178,13 +213,13 @@ $cards-height: 5em;
   @mixin line-of-four {
     @media (min-width: 1025px) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: $gap-size;
     }
 
     @media (max-width: 1024px) {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
       grid-gap: $gap-size-mobile;
     }
   }
@@ -192,13 +227,13 @@ $cards-height: 5em;
   @mixin line-of-five {
     @media (min-width: 1025px) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(5, 1fr);
       grid-gap: $gap-size;
     }
 
     @media (max-width: 1024px) {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
       grid-gap: $gap-size-mobile;
     }
   }
@@ -206,15 +241,15 @@ $cards-height: 5em;
   @mixin feature-grid {
     @media (min-width: 1025px) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       grid-gap: $gap-size;
     }
 
     /* mobile */
     @media (max-width: 1024px) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: $gap-size-mobile;
     }
   }
@@ -228,39 +263,65 @@ $cards-height: 5em;
     }
   }
 
-  @mixin card {
-    box-shadow: $card-box-shadow;
-    border-radius: $card-border-radius;
-    height: $cards-height;
+  @mixin cards {
+    box-shadow: $cards-box-shadow;
+    border-radius: $cards-border-radius;
+    height: $cardss-height;
+    position: relative;
 
     &:hover {
-      box-shadow: $card-box-shadow-hover;
+      box-shadow: $cards-box-shadow-hover;
     }
   }
 
-  @mixin single-card-img {
+  @mixin cards-link {
+    position: absolute;
     width: 100%;
-    height: auto;
-  }
-
-  @mixin double-card-img {
-    width: auto;
     height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 
-  /* single-card */
-  @mixin single-card {
-    @include card;
+  /* TO DO links change color when the parent div is hovered */ 
+
+  /* single-cards */
+  @mixin single-cards {
+    @include cards;
   }
 
-  /* double-card */
-  @mixin double-card {
+  /* double-cards */
+  @mixin double-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
-    @include card;
+    @include cards;
   }
 
+  /* Grid Hover Menu */
+
+  @mixin grid-hover-menu {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @mixin grid-hover-menu-item {
+    background-color: map-get($colors, grid-menu-color);
+    background-image: url();
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    &:hover {
+      background-color: map-get($colors, grid-menu-color-hover);
+      background-image: url();
+    }
+
+    &:active {
+      background-color: map-get($colors, grid-menu-color-active);
+      background-image: url();
+    }
+
+  }
 
   .container {
     @include feature-grid;
@@ -270,4 +331,6 @@ $cards-height: 5em;
     background: red;
     border: 5px yellow solid;
   }
+
+/* Classes */
 
