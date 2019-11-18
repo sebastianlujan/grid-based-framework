@@ -1,13 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 /* Margins */
 /* Padding */
 /* Fonts */
 /* Images */
 /* Containers */
-.ugly-button {
-  background-color: #fff;
-  margin: 3em;
-  padding: 1em;
+@media (min-width: 1025px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+.cont {
+  background: red;
+  border: 5px yellow solid;
 }
 /*# sourceMappingURL=framework.css.map */

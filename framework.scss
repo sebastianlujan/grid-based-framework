@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+/* Configuration */
+
+/* Margins and Paddings */
+
+$thin: 1em;
+$regular: 2em;
+$thick: 3em;
+
+/* Font Sizes */
+
+$title-size: 3em;
+$subtitle-size: 2em;
+$text-size: 1em;
+
+/*Grid Spacing*/
+$gap-size: 1em;
+$gap-size-mobile: 1em;
+
+
 $colors: (
   backgrounds-color: #fff,
   navigation-color: #fff,
@@ -20,112 +39,191 @@ $colors: (
 
 /* Margins */
 $margin: (
-  thin: 1em,
-  regular: 2em,
-  thick: 3em,
-  no-top-thin: 0 1em 1em 1em,
-  no-top-regular: 0 2em 2em 2em,
-  no-top-thick: 0 3em 3em 3em,
-  no-right-thin: 1em 0 1em 1em,
-  no-right-regular: 2em 0 2em 2em,
-  no-right-thick: 3em 0 3em 3em,
-  no-bottom-thin: 1em 1em 0 1em,
-  no-bottom-regular: 2em 2em 0 2em,
-  no-bottom-thick: 3em 3em 0 3em,
-  no-left-thin: 1em 1em 1em 0,
-  no-left-regular: 2em 2em 2em 0,
-  no-left-thick: 3em 3em 3em 0,
-  top-only-thin: 1em 0 0 0,
-  top-only-regular: 2em 0 0 0,
-  top-only-thick: 3em 0 0 0,
-  right-only-thin: 0 1em 0 0,
-  right-only-regular: 0 2em 0 0,
-  right-only-thick: 0 3em 0 0,
-  bottom-only-thin: 0 0 1em 0,
-  bottom-only-regular: 0 0 2em 0,
-  bottom-only-thick: 0 0 3em 0,
-  left-only-thin: 0 0 0 1em,
-  left-only-regular: 0 0 0 2em,
-  left-only-thick: 0 0 0 3em,
-  vertical-thin: 1em 0,
-  vertical-regular: 2em 0,
-  vertical-thick: 3em 0,
-  horizontal-thin: 0 1em,
-  horizontal-regular: 0 2em,
-  horizontal-thick: 0 3em
+  thin: $thin,
+  regular: $reguar,
+  thick: $thick,
+  no-top-thin: 0 $thin $thin $thin,
+  no-top-regular: 0 $reguar $reguar $reguar,
+  no-top-thick: 0 $thick $thick $thick,
+  no-right-thin: $thin 0 $thin $thin,
+  no-right-regular: $reguar 0 $reguar $reguar,
+  no-right-thick: $thick 0 $thick $thick,
+  no-bottom-thin: $thin $thin 0 $thin,
+  no-bottom-regular: $reguar $reguar 0 $reguar,
+  no-bottom-thick: $thick $thick 0 $thick,
+  no-left-thin: $thin $thin $thin 0,
+  no-left-regular: $reguar $reguar $reguar 0,
+  no-left-thick: $thick $thick $thick 0,
+  top-only-thin: $thin 0 0 0,
+  top-only-regular: $reguar 0 0 0,
+  top-only-thick: $thick 0 0 0,
+  right-only-thin: 0 $thin 0 0,
+  right-only-regular: 0 $reguar 0 0,
+  right-only-thick: 0 $thick 0 0,
+  bottom-only-thin: 0 0 $thin 0,
+  bottom-only-regular: 0 0 $reguar 0,
+  bottom-only-thick: 0 0 $thick 0,
+  left-only-thin: 0 0 0 $thin,
+  left-only-regular: 0 0 0 $reguar,
+  left-only-thick: 0 0 0 $thick,
+  vertical-thin: $thin 0,
+  vertical-regular: $reguar 0,
+  vertical-thick: $thick 0,
+  horizontal-thin: 0 $thin,
+  horizontal-regular: 0 $reguar,
+  horizontal-thick: 0 $thick
 );
 
 /* Padding */
 $padding: (
-  thin: 1em,
-  regular: 2em,
-  thick: 3em,
-  no-top-thin: 0 1em 1em 1em,
-  no-top-regular: 0 2em 2em 2em,
-  no-top-thick: 0 3em 3em 3em,
-  no-right-thin: 1em 0 1em 1em,
-  no-right-regular: 2em 0 2em 2em,
-  no-right-thick: 3em 0 3em 3em,
-  no-bottom-thin: 1em 1em 0 1em,
-  no-bottom-regular: 2em 2em 0 2em,
-  no-bottom-thick: 3em 3em 0 3em,
-  no-left-thin: 1em 1em 1em 0,
-  no-left-regular: 2em 2em 2em 0,
-  no-left-thick: 3em 3em 3em 0,
-  top-only-thin: 1em 0 0 0,
-  top-only-regular: 2em 0 0 0,
-  top-only-thick: 3em 0 0 0,
-  right-only-thin: 0 1em 0 0,
-  right-only-regular: 0 2em 0 0,
-  right-only-thick: 0 3em 0 0,
-  bottom-only-thin: 0 0 1em 0,
-  bottom-only-regular: 0 0 2em 0,
-  bottom-only-thick: 0 0 3em 0,
-  left-only-thin: 0 0 0 1em,
-  left-only-regular: 0 0 0 2em,
-  left-only-thick: 0 0 0 3em,
-  vertical-thin: 1em 0,
-  vertical-regular: 2em 0,
-  vertical-thick: 3em 0,
-  horizontal-thin: 0 1em,
-  horizontal-regular: 0 2em,
-  horizontal-thick: 0 3em
+  thin: $thin,
+  regular: $reguar,
+  thick: $thick,
+  no-top-thin: 0 $thin $thin $thin,
+  no-top-regular: 0 $reguar $reguar $reguar,
+  no-top-thick: 0 $thick $thick $thick,
+  no-right-thin: $thin 0 $thin $thin,
+  no-right-regular: $reguar 0 $reguar $reguar,
+  no-right-thick: $thick 0 $thick $thick,
+  no-bottom-thin: $thin $thin 0 $thin,
+  no-bottom-regular: $reguar $reguar 0 $reguar,
+  no-bottom-thick: $thick $thick 0 $thick,
+  no-left-thin: $thin $thin $thin 0,
+  no-left-regular: $reguar $reguar $reguar 0,
+  no-left-thick: $thick $thick $thick 0,
+  top-only-thin: $thin 0 0 0,
+  top-only-regular: $reguar 0 0 0,
+  top-only-thick: $thick 0 0 0,
+  right-only-thin: 0 $thin 0 0,
+  right-only-regular: 0 $reguar 0 0,
+  right-only-thick: 0 $thick 0 0,
+  bottom-only-thin: 0 0 $thin 0,
+  bottom-only-regular: 0 0 $reguar 0,
+  bottom-only-thick: 0 0 $thick 0,
+  left-only-thin: 0 0 0 $thin,
+  left-only-regular: 0 0 0 $reguar,
+  left-only-thick: 0 0 0 $thick,
+  vertical-thin: $thin 0,
+  vertical-regular: $reguar 0,
+  vertical-thick: $thick 0,
+  horizontal-thin: 0 $thin,
+  horizontal-regular: 0 $reguar,
+  horizontal-thick: 0 $thick
 );
 
 /* Fonts */
 
-/* Represent font-family */
 @mixin title {
   font-family: 'Raleway', sans-serif;
-  size: 3em;
+  size: $title-size;
   font-weight: bold;
   color: map-get($colors, texts-color);
 }
 
 @mixin subtitle {
   font-family: 'Raleway', sans-serif;
-  size: 2em;
+  size: $subtitle-size;
   font-weight: regular;
   color: map-get($colors, texts-color);
 }
 
 @mixin text {
   font-family: 'Raleway', sans-serif;
-  size: 1em;
+  size: $tex-size;
   font-weight: light;
   color: map-get($colors, texts-color);
+}
+
+@mixin links {
+  @include text;
+  color: map-get($colors, light-texts-color);
 }
 
 /* Images */
 
 /* Containers */
+  @mixin line-of-two {
+    @media (min-width: 1025px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $gap-size;
+    }
 
-.ugly-button {
-  background-color: map-get($colors, button-color);
-  margin: map-get($margin, thick);
-  padding: map-get($padding, thin);
-}
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: $gap-size-mobile;
+    }
+  }
 
-.ugly-text {
-  @include title;
-}
+  @mixin line-of-three {
+    @media (min-width: 1025px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: $gap-size;
+    }
+
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: $gap-size-mobile;
+    }
+  }
+
+  @mixin line-of-four {
+    @media (min-width: 1025px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: $gap-size;
+    }
+
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-gap: $gap-size-mobile;
+    }
+  }
+
+  @mixin line-of-five {
+    @media (min-width: 1025px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: $gap-size;
+    }
+
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: $gap-size-mobile;
+    }
+  }
+
+  @mixin feature-grid {
+    @media (min-width: 1025px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: $gap-size;
+    }
+
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: $gap-size-mobile;
+    }
+  }
+
+  @mixin feature-grid-large {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .container {
+    @include line-of-two;
+  }
+
+  .cont {
+    background: red;
+    border: 5px yellow solid;
+  }
+
