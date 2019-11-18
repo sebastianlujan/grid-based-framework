@@ -1,3 +1,4 @@
+/* Imported fonts */
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 /* Configuration */
@@ -14,13 +15,24 @@ $title-size: 3em;
 $subtitle-size: 2em;
 $text-size: 1em;
 
+/* Font Families */
+
+$title-font-family: 'Raleway', sans-serif;
+$subtitle-font-family: 'Raleway', sans-serif;
+$text-font-family: 'Raleway', sans-serif;
+
+/* Font Weight */
+$title-font-weight: bold;
+$subtitle-font-weight: regular;
+$text-font-weight: light;
+
 /*Grid Spacing*/
 $gap-size: 1em;
 $gap-size-mobile: 1em;
 
 $colors: (
   backgrounds-color: #fff,
-  cardss-background-color: #fff,
+  cards-background-color: #fff,
   navigation-color: #fff,
   container-color: #fff,
   texts-color: #fff,
@@ -30,6 +42,8 @@ $colors: (
   links-color: #fff,
   alerts-color: #fff,
   buttons-color: #fff,
+  buttons-color-hover: #fff,
+  buttons-color-active: #fff,
   buttons-text-color: #fff,
   hovers-color: #fff,
   borders-color: #fff,
@@ -37,7 +51,9 @@ $colors: (
   single-cards-border-color: #fff
   grid-menu-color: #fff,
   grid-menu-color-hover: #fff,
-  grid-menu-color-active: #fff
+  grid-menu-color-active: #fff,
+  cards-link-text: #fff,
+  cards-link-text-hover: #fff
 );
 
 /* Margins */
@@ -118,11 +134,12 @@ $padding: (
 $cards-border-radius: 4px;
 $cards-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 $cards-box-shadow-hover: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
-$cardss-height: 5em;
+$cards-height: 5em;
 $single-cards-border-width: 1px;
 
 /* Grid */
 @mixin body {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -142,23 +159,23 @@ grid-column: 1 / 13;
 /* Fonts */
 
 @mixin title {
-  font-family: 'Raleway', sans-serif;
+  font-family: $title-font-family;
   size: $title-size;
-  font-weight: bold;
+  font-weight: $title-font-weight;
   color: map-get($colors, texts-color);
 }
 
 @mixin subtitle {
-  font-family: 'Raleway', sans-serif;
+  font-family: $subtitle-font-family;
   size: $subtitle-size;
-  font-weight: regular;
+  font-weight: $subtitle-font-weight;
   color: map-get($colors, texts-color);
 }
 
 @mixin text {
-  font-family: 'Raleway', sans-serif;
+  font-family: $text-font-family;
   size: $tex-size;
-  font-weight: light;
+  font-weight: $text-font-weight;
   color: map-get($colors, texts-color);
 }
 
@@ -257,6 +274,7 @@ grid-column: 1 / 13;
   @mixin feature-grid-large {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
+    @include cards;
 
     @media (max-width: 1024px) {
       display: none;
@@ -266,7 +284,7 @@ grid-column: 1 / 13;
   @mixin cards {
     box-shadow: $cards-box-shadow;
     border-radius: $cards-border-radius;
-    height: $cardss-height;
+    height: $cards-height;
     position: relative;
 
     &:hover {
@@ -283,7 +301,13 @@ grid-column: 1 / 13;
     z-index: -1;
   }
 
-  /* TO DO links change color when the parent div is hovered */ 
+  @mixin cards-link {
+    color: map-get($colors, cards-link-text);
+
+    &:hover {
+      color: map-get($colors, cards-link-text-hover);
+    }
+  }
 
   /* single-cards */
   @mixin single-cards {
@@ -323,14 +347,152 @@ grid-column: 1 / 13;
 
   }
 
-  .container {
-    @include feature-grid;
+  /* Components */
+
+  @mixin buttons {
+    color: map-get($colors, buttons-text-color);
+    background-color: map-get($colors, buttons-color);
+    border-radius: $cards-border-radius;
+
+    &:hover {
+      background-color: map-get($colors, buttons-color-hover);
+    }
+
+    &:active {
+      background-color: map-get($colors, buttons-color-active);
+    }
   }
 
-  .cont {
-    background: red;
-    border: 5px yellow solid;
+  @mixin search-fields {
+    box-shadow: $cards-box-shadow;
+  }
+
+  @mixin icons {
+
   }
 
 /* Classes */
 
+body {
+  @include body;
+}
+
+nav {
+  @include grid-0-12-0;
+}
+
+header {
+  @include grid-1-10-1;
+}
+
+main {
+  @include grid-2-8-2;
+}
+
+footer {
+  @include grid-0-12-0;
+}
+
+/* Text */
+
+.title {
+  @include title;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.text {
+  @include text;
+}
+
+.links {
+  @include links;
+}
+
+/* Images */
+
+.single-cards-img {
+  @include single-cards-img;
+}
+
+.double-cards-img {
+  @include double-cards-img;
+}
+
+/* Containers */
+
+.line-of-two {
+  @include line-of-two;
+}
+
+.line-of-three {
+  @include line-of-three;
+}
+
+.line-of-four {
+  @include line-of-four;
+}
+
+.line-of-five {
+  @include line-of-five;
+}
+
+.feature-grid {
+  @include feature-grid;
+}
+
+/* Cards */
+
+.feature-grid-large {
+  @include feature-grid-large;
+}
+
+.single-cards {
+  @include single-cards;
+}
+
+.double-cards {
+  @include double-cards;
+}
+
+.cards-link {
+  @include cards-link;
+}
+
+.single-cards:hover {
+  .single-cards > a > span {
+    @include cards-link;
+  }
+}
+
+.double-cards:hover {
+  .double-cards > a > span {
+    @include cards-link;
+  }
+}
+
+/* Grid Hover Menu */
+
+.grid-hover-menu {
+  @include grid-hover-menu;
+}
+
+.grid-hover-menu-item {
+  @include grid-hover-menu-item;
+}
+
+/* Components */
+
+.buttons {
+  @include buttons;
+}
+
+.search-fields {
+  @include search-fields;
+}
+
+.icons {
+  @include icons;
+}
