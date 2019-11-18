@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 $colors: (
   backgrounds-color: #fff,
   navigation-color: #fff,
@@ -53,7 +55,7 @@ $margin: (
   horizontal-thick: 0 3em
 );
 
-/* Padding */ 
+/* Padding */
 $padding: (
   thin: 1em,
   regular: 2em,
@@ -90,9 +92,31 @@ $padding: (
   horizontal-thick: 0 3em
 );
 
-/* Fonts */ 
+/* Fonts */
 
-/* Images */ 
+/* Represent font-family */
+@mixin title {
+  font-family: 'Raleway', sans-serif;
+  size: 3em;
+  font-weight: bold;
+  color: map-get($colors, texts-color);
+}
+
+@mixin subtitle {
+  font-family: 'Raleway', sans-serif;
+  size: 2em;
+  font-weight: regular;
+  color: map-get($colors, texts-color);
+}
+
+@mixin text {
+  font-family: 'Raleway', sans-serif;
+  size: 1em;
+  font-weight: light;
+  color: map-get($colors, texts-color);
+}
+
+/* Images */
 
 /* Containers */
 
@@ -100,4 +124,8 @@ $padding: (
   background-color: map-get($colors, button-color);
   margin: map-get($margin, thick);
   padding: map-get($padding, thin);
+}
+
+.ugly-text {
+  @include title;
 }
