@@ -145,7 +145,7 @@ $single-cards-border-width: 1px;
 }
 
 @mixin grid-0-12-0 {
-grid-column: 1 / 13;
+  grid-column: 1 / 13;
 }
 
 @mixin grid-1-10-1 {
@@ -273,7 +273,7 @@ grid-column: 1 / 13;
 
   @mixin feature-grid-large {
     grid-column: 1 / 3;
-    grid-row: 1 / 3;
+    grid-row: 1 / 2;
     @include cards;
 
     @media (max-width: 1024px) {
