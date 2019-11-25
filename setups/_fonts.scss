@@ -13,3 +13,10 @@ $text-font-family: 'Raleway', sans-serif;
 /* Font Weight */
 $title-font-weight: bold;
 $subtitle-font-weight: regular;
+
+/* Imported Fonts */
+
+@font-face {
+  font-family: "Fericons";
+  src: url("./framework assets/Fericons.ttf");
+}
