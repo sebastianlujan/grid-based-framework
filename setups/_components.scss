@@ -1,0 +1,14 @@
+/* cards setup */
+$cards-border-radius: 4px;
+$cards-box-shadow: 0 1px 1px 0 map-get($colors, cards-shadow-color);
+$cards-box-shadow-hover: 0 1px 24px 0 map-get($colors, cards-shadow-color);
+$cards-height: 5em;
+$single-cards-border-width: 1px;
+
+/* forms */
+$forms-border-radius: 5px;
+$forms-border-style: solid;
+
+/* navs */
+$navs-box-shadow: 0 2px 2px 0 map-get( $colors, navs-shadow-color);
+$navs-height: 5vh;

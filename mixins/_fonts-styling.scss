@@ -1,0 +1,27 @@
+/* Fonts */
+
+@mixin title {
+  font-family: $title-font-family;
+  size: $title-size;
+  font-weight: $title-font-weight;
+  color: map-get($colors, texts-color);
+}
+
+@mixin subtitle {
+  font-family: $subtitle-font-family;
+  size: $subtitle-size;
+  font-weight: $subtitle-font-weight;
+  color: map-get($colors, texts-color);
+}
+
+@mixin text {
+  font-family: $text-font-family;
+  size: $tex-size;
+  font-weight: $text-font-weight;
+  color: map-get($colors, texts-color);
+}
+
+@mixin links {
+  @include text;
+  color: map-get($colors, light-texts-color);
+}

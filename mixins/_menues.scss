@@ -1,0 +1,24 @@
+/* Grid Hover Menu */
+
+@mixin grid-hover-menu {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+@mixin grid-hover-menu-item {
+  background-color: map-get($colors, grid-menu-color);
+  background-image: url();
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-color: map-get($colors, grid-menu-color-hover);
+    background-image: url();
+  }
+
+  &:active {
+    background-color: map-get($colors, grid-menu-color-active);
+    background-image: url();
+  }
+
+}

@@ -1,0 +1,23 @@
+/* Components Features */
+
+@mixin buttons {
+  color: map-get($colors, buttons-text-color);
+  background-color: map-get($colors, buttons-color);
+  border-radius: $cards-border-radius;
+
+  &:hover {
+    background-color: map-get($colors, buttons-color-hover);
+  }
+
+  &:active {
+    background-color: map-get($colors, buttons-color-active);
+  }
+}
+
+@mixin search-fields {
+  box-shadow: $cards-box-shadow;
+}
+
+@mixin icons {
+
+}
