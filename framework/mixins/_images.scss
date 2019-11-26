@@ -2,7 +2,7 @@
 @mixin single-cards-img {
   width: 100%;
   height: auto;
-  border-bottom: $single-cards-border-width map-get(colors, single-cards-border-color) solid;
+  border-bottom: $single-cards-border-width map-get($colors, single-cards-border-color) solid;
 }
 
 @mixin double-cards-img {

@@ -16,7 +16,7 @@
 
 @mixin text {
   font-family: $text-font-family;
-  size: $tex-size;
+  size: $text-size;
   font-weight: $text-font-weight;
   color: map-get($colors, texts-color);
 }
