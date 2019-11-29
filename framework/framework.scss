@@ -77,7 +77,7 @@ header {
 }
 
 main {
-  @include grid-2-8-2;
+  @include grid-1-10-1;
 }
 
 footer {
@@ -189,3 +189,31 @@ footer {
 }
 
 
+/* Specific Styling not in the framework */
+body {
+  background-color: map-get($colors, backgrounds-color);
+}
+
+h1 {
+  @include title;
+}
+
+a {
+  @include links;
+}
+
+p {
+  @include text;
+}
+
+.grid-menu-main {
+  @include grid-hover-menu;
+}
+
+.grid-menu-item {
+  @include grid-hover-menu-item;
+}
+
+.double-card {
+  @include
+}

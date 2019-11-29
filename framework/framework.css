@@ -54,6 +54,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
+  margin: -5vh -2vw, -2vw 0;
 }
 
 nav {
@@ -175,7 +176,11 @@ footer {
   size: 1em;
   font-weight: 400;
   color: #333;
-  color: #676767;
+  color: #3483fa;
+}
+
+.links:hover {
+  color: #1259c3;
 }
 
 /* Images */
@@ -186,7 +191,7 @@ footer {
 }
 
 .double-cards-img {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 
@@ -354,8 +359,11 @@ footer {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  height: 5em;
+  height: 10em;
   position: relative;
+  background-color: #fff;
+  margin: 0.8em;
+  padding: 0 0 0 3em;
 }
 
 .feature-grid-large:hover {
@@ -379,8 +387,11 @@ footer {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  height: 5em;
+  height: 10em;
   position: relative;
+  background-color: #fff;
+  margin: 0.8em;
+  padding: 0 0 0 3em;
 }
 
 .single-cards:hover {
@@ -397,8 +408,11 @@ footer {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  height: 5em;
+  height: 10em;
   position: relative;
+  background-color: #fff;
+  margin: 0.8em;
+  padding: 0 0 0 3em;
 }
 
 .double-cards:hover {
@@ -431,11 +445,20 @@ footer {
 }
 
 /* Grid Hover Menu */
-.grid-hover-menu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+@media (max-width: 1024px) {
+  .grid-hover-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-hover-menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[7];
+        grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0;
+  }
 }
 
 .grid-hover-menu-item {
@@ -443,6 +466,9 @@ footer {
   background-image: url();
   background-size: 100%;
   background-repeat: no-repeat;
+  border: 2px #ebebeb;
+  cursor: pointer;
+  text-align: center;
 }
 
 .grid-hover-menu-item:hover {
@@ -460,6 +486,11 @@ footer {
   color: #fff;
   background-color: #3483fa;
   border-radius: 4px;
+  border-style: solid;
+  border-color: #3483fa;
+  padding: 0.5em 0.5em;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .buttons:hover {
@@ -473,5 +504,72 @@ footer {
 .search-fields {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Styling not in the framework */
+body {
+  background-color: #ebebeb;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  size: 3em;
+  font-weight: 700;
+  color: #333;
+}
+
+a {
+  font-family: "Raleway", sans-serif;
+  size: 1em;
+  font-weight: 400;
+  color: #333;
+  color: #3483fa;
+}
+
+a:hover {
+  color: #1259c3;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  size: 1em;
+  font-weight: 400;
+  color: #333;
+}
+
+@media (max-width: 1024px) {
+  .grid-menu-main {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-menu-main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[7];
+        grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0;
+  }
+}
+
+.grid-menu-item {
+  background-color: #fff;
+  background-image: url();
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 2px #ebebeb;
+  cursor: pointer;
+  text-align: center;
+}
+
+.grid-menu-item:hover {
+  background-color: #3483fa;
+  background-image: url();
+}
+
+.grid-menu-item:active {
+  background-color: #3483fa;
+  background-image: url();
 }
 /*# sourceMappingURL=framework.css.map */

@@ -23,5 +23,9 @@
 
 @mixin links {
   @include text;
-  color: map-get($colors, light-texts-color);
+  color: map-get($colors, links-color);
+
+  &:hover {
+    color: map-get($colors, hovers-color);
+  }
 }

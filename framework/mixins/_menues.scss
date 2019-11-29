@@ -1,8 +1,16 @@
 /* Grid Hover Menu */
 
 @mixin grid-hover-menu {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  @media (max-width: 1024px){
+    display: none;
+  }
+  
+
+  @media (min-width: 1025px){
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0;
+  }  
 }
 
 @mixin grid-hover-menu-item {
@@ -10,6 +18,9 @@
   background-image: url();
   background-size: 100%;
   background-repeat: no-repeat;
+  border: 2px map-get($colors, borders-color);
+  cursor: pointer;
+  text-align: center;
 
   &:hover {
     background-color: map-get($colors, grid-menu-color-hover);

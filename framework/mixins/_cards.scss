@@ -3,6 +3,10 @@
   border-radius: $cards-border-radius;
   height: $cards-height;
   position: relative;
+  background-color: map-get($colors, cards-background-color);
+  margin: $thin;
+  padding: map-get($padding, left-only-thick);
+  overflow: hidden;
 
   &:hover {
     box-shadow: $cards-box-shadow-hover;
