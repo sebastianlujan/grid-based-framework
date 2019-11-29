@@ -68,13 +68,13 @@
 
   @media (min-width: 721px) {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     grid-gap: $gap-size-mobile;
   }
 
   @media (max-width: 70px) {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: $gap-size-mobile;
   }
 }
