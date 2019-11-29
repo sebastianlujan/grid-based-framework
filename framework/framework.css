@@ -64,7 +64,7 @@ nav {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  background-color: #fff;
+  background-color: #fff159;
   height: 5vh;
 }
 
@@ -153,29 +153,29 @@ footer {
   font-family: "Raleway", sans-serif;
   size: 3em;
   font-weight: 700;
-  color: #fff;
+  color: #333;
 }
 
 .subtitle {
   font-family: "Raleway", sans-serif;
   size: 2em;
   font-weight: 500;
-  color: #fff;
+  color: #333;
 }
 
 .text {
   font-family: "Raleway", sans-serif;
   size: 1em;
   font-weight: 400;
-  color: #fff;
+  color: #333;
 }
 
 .links {
   font-family: "Raleway", sans-serif;
   size: 1em;
   font-weight: 400;
-  color: #fff;
-  color: #fff;
+  color: #333;
+  color: #676767;
 }
 
 /* Images */
@@ -407,27 +407,27 @@ footer {
 }
 
 .cards-link {
-  color: #fff;
+  color: #676767;
 }
 
 .cards-link:hover {
-  color: #fff;
+  color: #3483fa;
 }
 
 .single-cards:hover .single-cards > a > span {
-  color: #fff;
+  color: #676767;
 }
 
 .single-cards:hover .single-cards > a > span:hover {
-  color: #fff;
+  color: #3483fa;
 }
 
 .double-cards:hover .double-cards > a > span {
-  color: #fff;
+  color: #676767;
 }
 
 .double-cards:hover .double-cards > a > span:hover {
-  color: #fff;
+  color: #3483fa;
 }
 
 /* Grid Hover Menu */
@@ -446,28 +446,28 @@ footer {
 }
 
 .grid-hover-menu-item:hover {
-  background-color: #fff;
+  background-color: #3483fa;
   background-image: url();
 }
 
 .grid-hover-menu-item:active {
-  background-color: #fff;
+  background-color: #3483fa;
   background-image: url();
 }
 
 /* Components */
 .buttons {
   color: #fff;
-  background-color: #fff;
+  background-color: #3483fa;
   border-radius: 4px;
 }
 
 .buttons:hover {
-  background-color: #fff;
+  background-color: #1259c3;
 }
 
 .buttons:active {
-  background-color: #fff;
+  background-color: #1259c3;
 }
 
 .search-fields {
