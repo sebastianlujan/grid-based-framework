@@ -460,27 +460,39 @@ footer {
     -ms-grid-columns: (1fr)[7];
         grid-template-columns: repeat(7, 1fr);
     grid-gap: 0;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
 }
 
 .grid-hover-menu-item {
   background-color: #fff;
-  background-image: url();
   background-size: 100%;
   background-repeat: no-repeat;
   border: 2px #ebebeb;
   cursor: pointer;
   text-align: center;
+  padding-top: 2.5em;
+}
+
+.grid-hover-menu-item > img {
+  width: auto;
+  height: 45px;
 }
 
 .grid-hover-menu-item:hover {
   background-color: #3483fa;
-  background-image: url();
 }
 
-.grid-hover-menu-item:active {
-  background-color: #3483fa;
-  background-image: url();
+.grid-hover-menu-item:hover > img {
+  -webkit-filter: grayscale(1) brightness(3);
+          filter: grayscale(1) brightness(3);
+}
+
+.grid-hover-menu-item:hover p {
+  color: #fff;
 }
 
 /* Components */
@@ -552,26 +564,38 @@ p {
     -ms-grid-columns: (1fr)[7];
         grid-template-columns: repeat(7, 1fr);
     grid-gap: 0;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
 }
 
 .grid-menu-item {
   background-color: #fff;
-  background-image: url();
   background-size: 100%;
   background-repeat: no-repeat;
   border: 2px #ebebeb;
   cursor: pointer;
   text-align: center;
+  padding-top: 2.5em;
+}
+
+.grid-menu-item > img {
+  width: auto;
+  height: 45px;
 }
 
 .grid-menu-item:hover {
   background-color: #3483fa;
-  background-image: url();
 }
 
-.grid-menu-item:active {
-  background-color: #3483fa;
-  background-image: url();
+.grid-menu-item:hover > img {
+  -webkit-filter: grayscale(1) brightness(3);
+          filter: grayscale(1) brightness(3);
+}
+
+.grid-menu-item:hover p {
+  color: #fff;
 }
 /*# sourceMappingURL=framework.css.map */
