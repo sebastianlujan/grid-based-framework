@@ -23,34 +23,11 @@ nav {
   grid-template-columns: repeat(12, 1fr);
   background-color: map-get($colors , navigation-color);
   height: $navs-height;
-}
-
-.nav-search {
-  @include grid-4-4-4;
-
-  input {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: $gap-size;
-    background: map-get($colors ,inputs-color);
-
-    @media (max-width: 1024px) {
-      display: none;
-    }
-  }
-
-  .glasses {
-    @media (min-width: 1025px) {
-      float: right;
-    }
-
-    float: left;
-    content: 'a';
-  }
-}
-
-.nav-logo {
-  @include grid-0-4-8;
+  position: absolute;
+  top: 0;
+  left:0;
+  overflow: hidden;
+  box-shadow: $navs-box-shadow;
 }
 
 .nav-links {
@@ -205,6 +182,79 @@ a {
 p {
   @include text;
 }
+
+.top-nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  @include grid-0-12-0;
+  padding: map-get($padding, top-only-thin);
+}
+
+.nav-logo {
+  @include grid-1-2-9;
+}
+
+.ml-logo {
+  width: auto;
+  height: 35px;
+}
+
+.nav-search {
+  @include grid-3-5-4;
+
+.search-bar {
+  display: grid;
+  grid-template-columns: 18fr 1fr;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  height: 2.5em;
+  padding-bottom: 3em;
+}
+
+.ml-search {
+    background: map-get($colors ,inputs-color);
+    width: 80%;
+    height: 2em;
+    border-style: hidden;
+    position: relative;
+    margin: map-get($margin, left-only-thin);
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .ml-search-icon {
+    font-family: "Fericons";
+    font-weight: bolder;
+    color: map-get($colors, lighter-texts-color);
+    border-left: 1.5px map-get($colors, lighter-texts-color) solid;
+    padding-left: 3px;
+    @media (min-width: 1025px) {
+    }
+  }
+}
+
+.nav-christmas {
+@include grid-8-4-0
+}
+
+.christmas {
+  height: 3em;
+  width: auto;
+  @media (max-width: 1024px){
+    display: none;
+  }
+}
+
+.bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  @include grid-0-12-0;
+}
+
+
+
 
 .grid-menu-main {
   @include grid-hover-menu;
