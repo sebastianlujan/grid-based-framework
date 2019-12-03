@@ -333,6 +333,34 @@ margin-top: -12px;;
   font-size: $small-text-size;
 }
 
-* {
-  border: 1px red solid;
+
+.double-card-text {
+  width: 13em;
+
+  .double-card-text-small {
+    font-size: $text-size;
+    font-weight: $title-font-weight;
+    letter-spacing: 0.1em;
+    margin-top: 5em;
+  }
+
+  .double-card-text-large {
+    font-size: $subtitle-size;
+    font-weight: $title-font-weight;
+  }
+
+  .double-card-text-button {
+    padding-right: 20px;
+    padding-left: 20px;
+ }
+
+}
+
+.double-card-image {
+  img {
+    width: 132%;
+    height: auto;
+    margin-left: -4em;
+    margin-top: 2.5em;
+  }
 }
