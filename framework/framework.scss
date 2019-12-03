@@ -22,7 +22,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: map-get($colors , navigation-color);
-  height: $navs-height;
+  /* height: $navs-height; */
+  height: auto;
   position: absolute;
   top: 0;
   left:0;
@@ -105,6 +106,10 @@ footer {
 
 .line-of-five {
   @include line-of-five;
+}
+
+.line-of-six {
+  @include line-of-six;
 }
 
 .feature-grid {
@@ -190,7 +195,7 @@ p {
   padding: map-get($padding, top-only-thin);
 }
 
-.nav-logo {
+.nav-logo , .location{
   @include grid-1-2-9;
 }
 
@@ -199,7 +204,7 @@ p {
   height: 35px;
 }
 
-.nav-search {
+.nav-search, .links-one {
   @include grid-3-5-4;
 
 .search-bar {
@@ -235,8 +240,8 @@ p {
   }
 }
 
-.nav-christmas {
-@include grid-8-4-0
+.nav-christmas , .links-two {
+  @include grid-8-4-0
 }
 
 .christmas {
@@ -253,13 +258,19 @@ p {
   @include grid-0-12-0;
 }
 
-
-
-
 .grid-menu-main {
   @include grid-hover-menu;
 }
 
 .grid-menu-item {
   @include grid-hover-menu-item;
+}
+
+.location {
+  img { width: 35%; }
+  p { margin-top: 10px; }
+}
+
+.links-one-item {
+  font-size: $text-size;
 }
