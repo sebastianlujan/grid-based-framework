@@ -58,10 +58,6 @@ body {
 
 nav {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
   background-color: #fff159;
   /* height: $navs-height; */
   height: auto;
@@ -555,9 +551,7 @@ p {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1 / 13;
+  width: 100%;
   padding: 0.8em 0 0 0;
 }
 
@@ -638,7 +632,23 @@ p {
   padding-left: 3px;
 }
 
-.nav-christmas, .links-two {
+@media (min-width: 1025px) {
+  .nav-christmas {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-christmas {
+    -ms-grid-column: 12;
+    -ms-grid-column-span: 1;
+    grid-column: 12 / 13;
+  }
+}
+
+.links-two {
   -ms-grid-column: 9;
   -ms-grid-column-span: 4;
   grid-column: 9 / 13;
@@ -671,9 +681,7 @@ p {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1 / 13;
+  width: 100%;
   margin: 0.8em 0 0 0;
 }
 

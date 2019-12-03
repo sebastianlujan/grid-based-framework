@@ -19,8 +19,7 @@ body {
 
 nav {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+
   background-color: map-get($colors , navigation-color);
   /* height: $navs-height; */
   height: auto;
@@ -192,7 +191,7 @@ p {
 .top-nav {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  @include grid-0-12-0;
+  width: 100%;
   padding: map-get($padding, top-only-thin);
 }
 
@@ -261,7 +260,7 @@ p {
     @include grid-8-4-0;
   }
   @media (max-width: 1024px){
-    @include grid 11-1-0;
+    @include grid-11-1-0;
   }
 } 
 
@@ -288,7 +287,7 @@ p {
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  @include grid-0-12-0;
+  width: 100%;
   margin: map-get($margin, top-only-thin);
   @media (max-width: 1024px){
     display: none;
