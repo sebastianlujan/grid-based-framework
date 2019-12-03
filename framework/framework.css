@@ -1,5 +1,5 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap");
 /* Setups */
 /* Margins */
 /* Padding */
@@ -83,7 +83,7 @@ nav {
 
 .nav-links .nav-links-item {
   font-family: "Raleway", sans-serif;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: 400;
 }
 
@@ -120,30 +120,30 @@ footer {
 /* Text */
 .title {
   font-family: "Raleway", sans-serif;
-  size: 3em;
-  font-weight: 700;
-  color: #333;
+  size: 2.7em;
+  font-weight: 600;
+  color: #4b4b4b;
 }
 
 .subtitle {
   font-family: "Raleway", sans-serif;
-  size: 2em;
+  size: 1.7em;
   font-weight: 500;
-  color: #333;
+  color: #4b4b4b;
 }
 
 .text {
   font-family: "Raleway", sans-serif;
-  size: 1em;
+  size: 0.7em;
   font-weight: 400;
-  color: #333;
+  color: #4b4b4b;
 }
 
 .links {
   font-family: "Raleway", sans-serif;
-  size: 1em;
+  size: 0.7em;
   font-weight: 400;
-  color: #333;
+  color: #4b4b4b;
   color: #3483fa;
 }
 
@@ -503,7 +503,7 @@ footer {
   border-style: solid;
   border-color: #3483fa;
   padding: 0.5em 0.5em;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: 500;
 }
 
@@ -527,16 +527,16 @@ body {
 
 h1 {
   font-family: "Raleway", sans-serif;
-  size: 3em;
-  font-weight: 700;
-  color: #333;
+  size: 2.7em;
+  font-weight: 600;
+  color: #4b4b4b;
 }
 
 a {
   font-family: "Raleway", sans-serif;
-  size: 1em;
+  size: 0.7em;
   font-weight: 400;
-  color: #333;
+  color: #4b4b4b;
   color: #3483fa;
 }
 
@@ -546,9 +546,9 @@ a:hover {
 
 p {
   font-family: "Raleway", sans-serif;
-  size: 1em;
+  size: 0.7em;
   font-weight: 400;
-  color: #333;
+  color: #4b4b4b;
 }
 
 .top-nav {
@@ -701,6 +701,34 @@ p {
 }
 
 .links-one-item {
-  font-size: 1em;
+  font-size: 0.7em;
+}
+
+.double-card-text {
+  width: 13em;
+}
+
+.double-card-text .double-card-text-small {
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-top: 5em;
+}
+
+.double-card-text .double-card-text-large {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.double-card-text .double-card-text-button {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.double-card-image img {
+  width: 132%;
+  height: auto;
+  margin-left: -4em;
+  margin-top: 2.5em;
 }
 /*# sourceMappingURL=framework.css.map */
