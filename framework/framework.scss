@@ -18,7 +18,7 @@ body {
 }
 
 nav {
-  @include grid-0-12-0;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: map-get($colors , navigation-color);
@@ -182,6 +182,7 @@ h1 {
 
 a {
   @include links;
+  font-size: $small-text-size;
 }
 
 p {
@@ -200,6 +201,21 @@ p {
 }
 
 .ml-logo {
+  width: auto;
+  height: 35px;
+  @media (max-width: 1024px){
+    display: none;
+  }
+}
+
+.ml-logo-mobile {
+  @include grid-1-2-9;
+  @media (min-width: 1024px){
+    display: none;
+  }
+}
+
+.logo-mobile {
   width: auto;
   height: 35px;
 }
@@ -240,8 +256,17 @@ p {
   }
 }
 
-.nav-christmas , .links-two {
-  @include grid-8-4-0
+.nav-christmas {
+  @media (min-width: 1025px){
+    @include grid-8-4-0;
+  }
+  @media (max-width: 1024px){
+    @include grid 11-1-0;
+  }
+} 
+
+.links-two {
+  @include grid-8-4-0;
 }
 
 .christmas {
@@ -252,10 +277,22 @@ p {
   }
 }
 
+.hamburger-menu {
+  width: auto;
+  height: 30px;
+  @media (min-width: 1024px){
+    display: none;
+  }
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   @include grid-0-12-0;
+  margin: map-get($margin, top-only-thin);
+  @media (max-width: 1024px){
+    display: none;
+  }
 }
 
 .grid-menu-main {
@@ -267,10 +304,36 @@ p {
 }
 
 .location {
-  img { width: 35%; }
-  p { margin-top: 10px; }
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  
+  grid-gap: 0px;
+  img { 
+    width: 28px; 
+    height: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-top: -20%;
+  }
+  p {
+
+  }
 }
 
+.nav-location-text-small {
+  font-size: $small-text-size;
+  margin-top: -3%;
+}
+
+.nav-location-text-medium {
+margin-top: -12px;;
+}
+
+
 .links-one-item {
-  font-size: $text-size;
+  font-size: $small-text-size;
+}
+
+* {
+  border: 1px red solid;
 }
