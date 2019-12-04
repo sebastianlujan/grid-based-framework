@@ -147,8 +147,11 @@ footer {
 
 /* Images */
 .single-cards-img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px #fff solid;
 }
 
@@ -386,11 +389,16 @@ footer {
   margin: 0.8em;
   padding: 0 0 0 3.1em;
   overflow: hidden;
+  height: 14.5em;
 }
 
 .single-cards:hover {
   -webkit-box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.single-cards:hover {
+  height: 20em;
 }
 
 .double-cards {
@@ -769,18 +777,8 @@ p {
   margin-top: -12px;
 }
 
-
+.links-one-item {
   font-size: 0.8em;
-}
-
-* {
-  border: 1px red solid;
-=======
-  font-size: 0.7em;
-}
-
-.double-card-text {
-  width: 13em;
 }
 
 .double-card-text .double-card-text-small {
