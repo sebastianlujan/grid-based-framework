@@ -33,6 +33,11 @@
 /* single-cards */
 @mixin single-cards {
   @include cards;
+  height: 14.5em;
+
+  &:hover {
+    height: 20em;
+  }
 }
 
 /* double-cards */
