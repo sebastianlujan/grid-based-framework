@@ -102,11 +102,12 @@
 @mixin feature-grid {
   @media (min-width: 1025px) {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: $gap-size;
   }
 
+  
   @media (min-width: 721px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -126,11 +127,11 @@
   @include cards;
 
   @media (min-width: 721px) {
-    display: none;
+
   }
 
   @media (max-width: 1024px) {
-    display: none;
+  
   }
 }
 
