@@ -475,3 +475,26 @@ margin-top: -12px;;
 
 .semi-menu-card-text-large { margin-bottom: 8px; }
 .semi-menu-card-text-link { padding: map-get( $padding, bottom-only-regular ); }
+
+.footer-section {
+  margin-top: $thick;
+  background-color: map-get( $colors, cards-background-color);
+
+  & > div {
+    text-align: center;
+    padding: $regular;
+    margin-top: $thick;
+    position: relative;
+  }
+
+  & > div::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+    height: 15%;
+    width: 2px;
+    border-right: 1px solid map-get($colors, divisors-color );
+  }
+
+}

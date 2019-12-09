@@ -906,4 +906,26 @@ p {
 .semi-menu-card-text-link {
   padding: 0 0 2em 0;
 }
+
+.footer-section {
+  margin-top: 3.1em;
+  background-color: #fff;
+}
+
+.footer-section > div {
+  text-align: center;
+  padding: 2em;
+  margin-top: 3.1em;
+  position: relative;
+}
+
+.footer-section > div::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 0;
+  height: 15%;
+  width: 2px;
+  border-right: 1px solid #dadada;
+}
 /*# sourceMappingURL=framework.css.map */
