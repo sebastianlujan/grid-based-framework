@@ -416,3 +416,47 @@ margin-top: -12px;;
     margin-top: 2.5em;
   }
 }
+
+/* semi menu */
+
+.semi-menu {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
+
+  background-color: map-get($colors , cards-background-color );
+
+  @media (min-width: 1025px) {
+    grid-gap: $gap-size;
+    margin-top: $thicker;
+  }
+
+  @media ( max-width: 1024px ) {
+    grid-gap: $gap-size-mobile;
+    margin-top: ($thicker / 2);
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $gap-size-mobile;
+  }
+}
+
+.semi-menu-card { 
+  display: grid; 
+  grid-template-columns: 20%, 80%;
+  grid-template-rows: 1fr;
+  height: 5em;
+}
+.semi-menu-card-image {
+  place-self: center;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 1em;
+}
+
+.semi-menu-card-text {
+  grid-column: 2/3;
+}
+
+.semi-menu-card-text-large { margin-bottom: 8px; }
+.semi-menu-card-text-link { padding: map-get( $padding, bottom-only-regular ); }
