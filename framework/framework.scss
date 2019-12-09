@@ -501,3 +501,52 @@ margin-top: -12px;;
     border-right: none;
   }
 }
+
+.footer-section {
+  padding-bottom: $regular;
+}
+
+.bottom-footer {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+background-color: map-get( $colors, cards-background-color);
+border-top: 2px map-get($colors, divisors-color) solid;
+padding-top: $thin;
+}
+
+.footer-sitemap {
+grid-column: 1 / 2;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+
+a {
+  @include subtitle;
+  font-size: 12px;
+}
+
+}
+
+.footer-copyright {
+grid-row: 2 / 3;
+grid-column: 1 / 4;
+font-size: 10px;
+color: map-get($colors, light-texts-color);
+margin-top: -0.1%;
+}
+
+.footer-button {
+grid-column: 3 / 4;
+height: 3em;
+border-radius: 5px;
+background-color: #ffe600;
+border: 2px #d9cd4b solid;
+@include subtitle;
+font-size: 14px;
+font-weight: bold;
+}
+
+.footer-button-icon {
+height: 2em;
+width: auto;
+}
