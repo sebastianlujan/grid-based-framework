@@ -919,7 +919,7 @@ p {
   position: relative;
 }
 
-.footer-section > div::before {
+.footer-section > div:before {
   content: "";
   position: absolute;
   top: 45%;
@@ -927,5 +927,9 @@ p {
   height: 15%;
   width: 2px;
   border-right: 1px solid #dadada;
+}
+
+.footer-section > div:last-child:before {
+  border-right: none;
 }
 /*# sourceMappingURL=framework.css.map */
