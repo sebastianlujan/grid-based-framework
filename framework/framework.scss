@@ -421,8 +421,7 @@ margin-top: -12px;;
 
 .semi-menu {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
-
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: map-get($colors , cards-background-color );
 
   @media (min-width: 1025px) {
@@ -431,13 +430,14 @@ margin-top: -12px;;
   }
 
   @media ( max-width: 1024px ) {
+    grid-template-columns: repeat(2, 1.5fr);
     grid-gap: $gap-size-mobile;
     margin-top: ($thicker / 2);
   }
 
   @media (max-width: 720px) {
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: $gap-size-mobile;
+    visibility: hidden;
   }
 }
 
@@ -446,6 +446,10 @@ margin-top: -12px;;
   grid-template-columns: 20%, 80%;
   grid-template-rows: 1fr;
   height: 5em;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 }
 .semi-menu-card-image {
   place-self: center;
