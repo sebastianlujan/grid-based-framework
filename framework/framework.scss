@@ -226,6 +226,11 @@ footer {
       display: block;
     }
   }
+
+  &:first-child, &:last-child {
+    img { margin-left: 0; }
+  }
+
 }
 
 .week-sales-cards-image {

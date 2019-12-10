@@ -488,6 +488,10 @@ footer {
   display: block;
 }
 
+.week-sales-cards:first-child img, .week-sales-cards:last-child img {
+  margin-left: 0;
+}
+
 .week-sales-cards-image {
   width: auto;
   height: 10em;
