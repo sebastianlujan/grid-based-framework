@@ -200,12 +200,79 @@ footer {
   .single-cards > a > span {
     @include cards-link;
   }
+
 }
 
 .double-cards:hover {
   .double-cards > a > span {
     @include cards-link;
   }
+}
+
+/* Week Sales */
+
+.week-sales {
+  height: 27em;
+}
+
+.week-sales-cards {
+  &:hover {
+    height: 23em;
+    .cards-hidden-price {
+      display: block;
+    }
+    
+    .cards-hidden-description {
+      display: block;
+    }
+  }
+}
+
+.week-sales-cards-image {
+width: auto;
+height: 10em;
+padding: $regular 0 $thin 0;
+margin-left: -15%;
+}
+
+.week-sales-border {
+  width: 150%;
+  height: 1px;
+  background: map-get($colors, borders-color);
+  margin-left: -20%;
+}
+
+.cards-hidden-price {
+  display: none;
+}
+
+.cards-price {
+  @include subtitle;
+  font-size: 22px;
+}
+
+.cards-discount {
+  font-size: $small-text-size;
+  color: map-get($colors, alt-texts-color);
+  font-weight: $subtitle-font-weight;
+}
+
+.cards-quotes {
+  font-size: $small-text-size;
+  color: map-get($colors, lighter-texts-color);
+}
+
+.cards-hidden-price {
+  display: none;
+  text-decoration: line-through;
+  font-size: $small-text-size;
+  color: map-get($colors, lighter-texts-color);
+}
+
+.cards-hidden-description {
+  display: none;
+  font-size: $small-text-size;
+  padding-bottom: $thin;
 }
 
 /* Grid Hover Menu */
@@ -398,6 +465,7 @@ margin-top: -12px;;
 
 
 .double-card-text {
+z-index: 10;
 
   .double-card-text-small {
     font-size: $text-size;
@@ -414,11 +482,12 @@ margin-top: -12px;;
   .double-card-text-button {
     padding-right: 20px;
     padding-left: 20px;
- }
+  }
 
 }
 
 .double-card-image {
+  z-index: 9;
   img {
     width: 132%;
     height: auto;
@@ -558,4 +627,74 @@ margin-top: -12px;;
 .footer-button-icon {
   height: 2em;
   width: auto;
+}
+
+
+
+/* Non Framework Cards*/
+.best-stores {
+  background-color: map-get($colors, cards-background-color);
+  height: auto;
+  width: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: $cards-border-radius;
+  margin-top: $regular;
+  box-shadow: $cards-box-shadow;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    box-shadow: $cards-box-shadow-hover;
+  }
+}
+
+.best-stores-background {
+position: absolute;
+top: 0;
+height: auto;
+width: 140%;
+z-index: 15;
+}
+
+.best-stores-image {
+  width: 27%;
+  height: auto;
+  border-radius: $cards-border-radius;
+  border: $single-cards-border-width map-get($colors, borders-color) solid;
+  margin-top: 20%;
+  cursor: pointer;
+  z-index: 17;
+}
+
+.best-stores-title {
+  @include title;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 17;
+}
+
+.best-stores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 2% 0 10% 0;
+  z-index: 17;
+}
+
+.best-stores-grid-items {
+  width: 85%;
+  height: auto;
+  border-radius: $cards-border-radius;
+  border: $single-cards-border-width map-get($colors, borders-color) solid;
+  cursor: pointer;
+  z-index: 17;
+}
+
+.best-stores-link {
+  @include links;
+  margin-bottom: 10%;
+  z-index: 17;
 }

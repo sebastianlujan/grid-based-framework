@@ -417,16 +417,12 @@ footer {
   margin: 0.8em;
   padding: 0 0 0 3.1em;
   overflow: hidden;
-  height: 14.5em;
+  height: 20em;
 }
 
 .single-cards:hover {
   -webkit-box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
-}
-
-.single-cards:hover {
-  height: 20em;
 }
 
 .double-cards {
@@ -473,6 +469,73 @@ footer {
 
 .double-cards:hover .double-cards > a > span:hover {
   color: #3483fa;
+}
+
+/* Week Sales */
+.week-sales {
+  height: 27em;
+}
+
+.week-sales-cards:hover {
+  height: 23em;
+}
+
+.week-sales-cards:hover .cards-hidden-price {
+  display: block;
+}
+
+.week-sales-cards:hover .cards-hidden-description {
+  display: block;
+}
+
+.week-sales-cards-image {
+  width: auto;
+  height: 10em;
+  padding: 2em 0 0.8em 0;
+  margin-left: -15%;
+}
+
+.week-sales-border {
+  width: 150%;
+  height: 1px;
+  background: #ebebeb;
+  margin-left: -20%;
+}
+
+.cards-hidden-price {
+  display: none;
+}
+
+.cards-price {
+  font-family: "Raleway", sans-serif;
+  size: 1.7em;
+  font-weight: 500;
+  color: #4b4b4b;
+  font-size: 22px;
+}
+
+.cards-discount {
+  font-size: 0.8em;
+  color: #39b54a;
+  font-weight: 500;
+}
+
+.cards-quotes {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.cards-hidden-price {
+  display: none;
+  text-decoration: line-through;
+  font-size: 0.8em;
+  color: #999;
+}
+
+.cards-hidden-description {
+  display: none;
+  font-size: 0.8em;
+  padding-bottom: 0.8em;
 }
 
 /* Grid Hover Menu */
@@ -809,6 +872,10 @@ p {
   font-size: 0.8em;
 }
 
+.double-card-text {
+  z-index: 10;
+}
+
 .double-card-text .double-card-text-small {
   font-size: 0.7em;
   font-weight: 600;
@@ -824,6 +891,10 @@ p {
 .double-card-text .double-card-text-button {
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.double-card-image {
+  z-index: 9;
 }
 
 .double-card-image img {
@@ -1011,5 +1082,96 @@ p {
 .footer-button-icon {
   height: 2em;
   width: auto;
+}
+
+/* Non Framework Cards*/
+.best-stores {
+  background-color: #fff;
+  height: auto;
+  width: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  margin-top: 2em;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.best-stores:hover {
+  -webkit-box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.best-stores-background {
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 140%;
+  z-index: 15;
+}
+
+.best-stores-image {
+  width: 27%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px #ebebeb solid;
+  margin-top: 20%;
+  cursor: pointer;
+  z-index: 17;
+}
+
+.best-stores-title {
+  font-family: "Raleway", sans-serif;
+  size: 2.7em;
+  font-weight: 600;
+  color: #4b4b4b;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 17;
+}
+
+.best-stores-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 2% 0 10% 0;
+  z-index: 17;
+}
+
+.best-stores-grid-items {
+  width: 85%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px #ebebeb solid;
+  cursor: pointer;
+  z-index: 17;
+}
+
+.best-stores-link {
+  font-family: "Raleway", sans-serif;
+  size: 0.7em;
+  font-weight: 400;
+  color: #4b4b4b;
+  color: #3483fa;
+  margin-bottom: 10%;
+  z-index: 17;
+}
+
+.best-stores-link:hover {
+  color: #1259c3;
 }
 /*# sourceMappingURL=framework.css.map */
