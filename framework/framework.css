@@ -944,7 +944,7 @@ p {
       grid-template-columns: 2fr 1fr 1fr;
   background-color: #fff;
   border-top: 2px #dadada solid;
-  padding-top: 0.8em;
+  padding: 0.8em 0.8em 0 0.8em;
 }
 
 .footer-sitemap {
@@ -953,8 +953,8 @@ p {
   grid-column: 1 / 2;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: 2fr 2fr 2fr 1fr;
+      grid-template-columns: 2fr 2fr 2fr 1fr;
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
 }
@@ -974,7 +974,9 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
-  font-size: 10px;
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: 1px;
   color: #676767;
   margin-top: -0.1%;
 }
@@ -991,8 +993,19 @@ p {
   size: 1.7em;
   font-weight: 500;
   color: #4b4b4b;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+.footer-button > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 6fr;
+      grid-template-columns: 0.5fr 6fr;
+}
+
+.footer-button > div span {
+  place-self: center;
 }
 
 .footer-button-icon {

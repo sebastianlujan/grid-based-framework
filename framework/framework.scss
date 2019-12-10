@@ -507,46 +507,55 @@ margin-top: -12px;;
 }
 
 .bottom-footer {
-display: grid;
-grid-template-columns: 2fr 1fr 1fr;
-background-color: map-get( $colors, cards-background-color);
-border-top: 2px map-get($colors, divisors-color) solid;
-padding-top: $thin;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  background-color: map-get( $colors, cards-background-color);
+  border-top: 2px map-get($colors, divisors-color) solid;
+  padding: map-get( $padding, no-bottom-thin );
 }
 
 .footer-sitemap {
-grid-column: 1 / 2;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
 
-a {
-  @include subtitle;
-  font-size: 12px;
-}
+  a {
+    @include subtitle;
+    font-size: 12px;
+  }
 
 }
 
 .footer-copyright {
-grid-row: 2 / 3;
-grid-column: 1 / 4;
-font-size: 10px;
-color: map-get($colors, light-texts-color);
-margin-top: -0.1%;
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+  font-size: $text-size;
+  font-weight: $subtitle-font-weight;
+  letter-spacing: 1px;
+  color: map-get($colors, light-texts-color);
+  margin-top: -0.1%;
 }
 
 .footer-button {
-grid-column: 3 / 4;
-height: 3em;
-border-radius: 5px;
-background-color: #ffe600;
-border: 2px #d9cd4b solid;
-@include subtitle;
-font-size: 14px;
-font-weight: bold;
+  grid-column: 3 / 4;
+  height: 3em;
+  border-radius: 5px;
+  background-color: #ffe600;
+  border: 2px #d9cd4b solid;
+  @include subtitle;
+  font-size: $text-size;
+  font-weight: $subtitle-font-weight;
+
+  & > div {
+    display: grid;
+    grid-template-columns: 0.5fr 6fr;
+    span { place-self: center; }
+  }
+  
 }
 
 .footer-button-icon {
-height: 2em;
-width: auto;
+  height: 2em;
+  width: auto;
 }
