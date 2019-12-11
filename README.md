@@ -9,7 +9,7 @@ You can find the original project specification at:
 * https://www.theodinproject.com/courses/html5-and-css3/lessons/design-your-own-grid-based-framework
 
 ---
- 👉 [meli demo](https://cdn.statically.io/gh/sebastianlujan/grid-based-framework/layout/index.html)
+ 👉 [meli demo](https://cdn.statically.io/gh/sebastianlujan/grid-based-framework/features/index.html)
 
  For this framework we created several partials in SCSS in order to create easy to understand modules divided in two directories, one for configuring absolute and relative values and one for structure set of up of the different pre made containers.
 
