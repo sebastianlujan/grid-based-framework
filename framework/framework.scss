@@ -1,8 +1,8 @@
 @import './imports';
 
 /*Grid Spacing*/
-$gap-size: 1em;
-$gap-size-mobile: 1em;
+$gap-size: 0;
+$gap-size-mobile: 0;
 
 /* Grid */
 @mixin body {
