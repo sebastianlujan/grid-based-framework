@@ -695,18 +695,42 @@ z-index: 10;
   font-size: $text-size;
   font-weight: $subtitle-font-weight;
   padding: 1px 7px 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  cursor: pointer;
 
-  & > div {
-    display: grid;
-    grid-template-columns: 0.5fr 6fr;
-    span { place-self: center; }
+  @media (max-width: 1024px) {
+    width: 80%;
   }
-  
+
+  @media (max-width: 720) {
+    width: 35%;
+  }
 }
 
 .footer-button-icon {
   height: 2em;
   width: auto;
+  margin-right: $thin;
+}
+
+
+
+.footer-button-text {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.footer-button-logo {
+    height: 2em;
+    width: auto;
+  @media (min-width: 1024px){
+    display: none;
+  }
 }
 
 

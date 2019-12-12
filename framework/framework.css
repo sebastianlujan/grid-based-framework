@@ -1183,22 +1183,55 @@ p {
   font-size: 0.7em;
   font-weight: 500;
   padding: 1px 7px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  cursor: pointer;
 }
 
-.footer-button > div {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 0.5fr 6fr;
-      grid-template-columns: 0.5fr 6fr;
+@media (max-width: 1024px) {
+  .footer-button {
+    width: 80%;
+  }
 }
 
-.footer-button > div span {
-  place-self: center;
+@media (max-width: 720) {
+  .footer-button {
+    width: 35%;
+  }
 }
 
 .footer-button-icon {
   height: 2em;
   width: auto;
+  margin-right: 0.8em;
+}
+
+@media (max-width: 1024px) {
+  .footer-button-text {
+    display: none;
+  }
+}
+
+.footer-button-logo {
+  height: 2em;
+  width: auto;
+}
+
+@media (min-width: 1024px) {
+  .footer-button-logo {
+    display: none;
+  }
 }
 
 /* Non Framework Cards*/
