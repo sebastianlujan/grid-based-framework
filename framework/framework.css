@@ -485,6 +485,10 @@ footer {
   height: 27em;
 }
 
+.week-sales-cards {
+  cursor: pointer;
+}
+
 .week-sales-cards:hover {
   height: 23em;
 }
@@ -493,29 +497,53 @@ footer {
   display: block;
 }
 
-@media (max-width: 720px) and (min-width: 721px) {
+.week-sales-cards:hover .cards-hidden-description {
+  display: block;
+}
+
+@media (max-width: 720px) {
   .week-sales-cards:hover .cards-hidden-description {
     display: none;
-    background-color: aqua;
   }
 }
 
-.week-sales-cards:first-child img, .week-sales-cards:last-child img {
-  margin-left: 0;
+.week-image-container {
+  width: 100%;
+  height: 13em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .week-sales-cards-image {
-  width: auto;
-  height: 10em;
-  padding: 2em 0 0.8em 0;
-  margin-left: -15%;
+  width: 80%;
+  height: auto;
+  margin-left: -30%;
+}
+
+@media (max-width: 720px) {
+  .week-sales-cards-image {
+    width: auto;
+    height: 80%;
+    margin-left: -15%;
+  }
 }
 
 .week-sales-border {
-  width: 150%;
+  width: 300%;
   height: 1px;
   background: #ebebeb;
-  margin-left: -20%;
+  margin-left: -50%;
 }
 
 .cards-hidden-price {
@@ -528,6 +556,7 @@ footer {
   font-weight: 500;
   color: #4b4b4b;
   font-size: 22px;
+  margin-top: 10%;
 }
 
 .cards-discount {

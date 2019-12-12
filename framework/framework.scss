@@ -216,6 +216,7 @@ footer {
 }
 
 .week-sales-cards {
+  cursor: pointer;
   &:hover {
     height: 23em;
     .cards-hidden-price {
@@ -223,30 +224,41 @@ footer {
     }
 
     .cards-hidden-description {
-      @media ( max-width: 720px) and ( min-width: 721px) {
+      display: block;
+      @media ( max-width: 720px) {
         display: none;
-        background-color: aqua;
       }
     }
   }
 
-  &:first-child, &:last-child {
-    img { margin-left: 0; }
-  }
+}
+
+.week-image-container {
+  width: 100%;
+  height: 13em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .week-sales-cards-image {
-width: auto;
-height: 10em;
-padding: $regular 0 $thin 0;
-margin-left: -15%;
+width: 80%;
+height: auto;
+margin-left: -30%;
+  @media (max-width: 720px){
+    width: auto;
+    height: 80%;
+    margin-left: -15%;
+  }
+
 }
 
 .week-sales-border {
-  width: 150%;
+  width: 300%;
   height: 1px;
   background: map-get($colors, borders-color);
-  margin-left: -20%;
+  margin-left: -50%;
 }
 
 .cards-hidden-price {
@@ -256,6 +268,7 @@ margin-left: -15%;
 .cards-price {
   @include subtitle;
   font-size: 22px;
+  margin-top: 10%;
 }
 
 .cards-discount {
