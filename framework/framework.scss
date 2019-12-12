@@ -218,7 +218,6 @@ footer {
 .week-sales-cards {
   &:hover {
     height: 23em;
-    
     .cards-hidden-price {
       display: block;
     }
@@ -229,13 +228,11 @@ footer {
         background-color: aqua;
       }
     }
-
   }
 
   &:first-child, &:last-child {
     img { margin-left: 0; }
   }
-
 }
 
 .week-sales-cards-image {
@@ -505,19 +502,16 @@ z-index: 10;
       opacity: 0.15;
       margin-top: -40%;
     }
-  
   }
 }
 
 .margin-top-thicker {
-  
   @media (min-width: 1025px) {
     margin-top: 2vw;
   }
 
   @media (max-width: 1024px) {
     margin-top: 35vw;
-
   }
 
   @media (max-width: 720px) {
@@ -644,6 +638,7 @@ z-index: 10;
   @include subtitle;
   font-size: $text-size;
   font-weight: $subtitle-font-weight;
+  padding: 1px 7px 2px;
 
   & > div {
     display: grid;
