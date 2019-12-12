@@ -239,13 +239,15 @@ footer {
 @media (max-width: 1024px) {
   .line-of-four {
     grid-gap: 1em;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 720px) {
   .line-of-four {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-gap: 0;
   }
 }
@@ -260,22 +262,22 @@ footer {
   }
 }
 
-@media (min-width: 721px) {
+@media (max-width: 1024px) {
   .line-of-five {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0;
   }
 }
 
-@media (max-width: 70px) {
+@media (max-width: 720px) {
   .line-of-five {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-gap: 0;
   }
 }
@@ -447,6 +449,13 @@ footer {
           box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 720px) {
+  .double-cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .cards-link {
   color: #676767;
 }
@@ -484,8 +493,11 @@ footer {
   display: block;
 }
 
-.week-sales-cards:hover .cards-hidden-description {
-  display: block;
+@media (max-width: 720px) and (min-width: 721px) {
+  .week-sales-cards:hover .cards-hidden-description {
+    display: none;
+    background-color: aqua;
+  }
 }
 
 .week-sales-cards:first-child img, .week-sales-cards:last-child img {
@@ -906,6 +918,31 @@ p {
   height: auto;
   margin-left: -4em;
   margin-top: 2.5em;
+}
+
+@media (max-width: 720px) {
+  .double-card-image img {
+    opacity: 0.15;
+    margin-top: -40%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .margin-top-thicker {
+    margin-top: 2vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .margin-top-thicker {
+    margin-top: 35vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .margin-top-thicker {
+    margin-top: 210vw;
+  }
 }
 
 /* semi menu */
