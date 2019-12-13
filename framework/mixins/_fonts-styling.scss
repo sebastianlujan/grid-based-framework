@@ -23,6 +23,7 @@
 
 @mixin links {
   @include text;
+
   color: map-get($colors, links-color);
 
   &:hover {

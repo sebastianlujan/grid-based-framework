@@ -10,6 +10,5 @@ $forms-border-radius: 5px;
 $forms-border-style: solid;
 
 /* navs */
-$navs-box-shadow: 0 2px 2px 0 map-get( $colors, navs-shadow-color);
+$navs-box-shadow: 0 2px 2px 0 map-get($colors, navs-shadow-color);
 $navs-height: 14vh;
-

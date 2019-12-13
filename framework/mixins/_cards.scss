@@ -33,8 +33,8 @@
 /* single-cards */
 @mixin single-cards {
   @include cards;
+
   height: $cards-height;
- 
 }
 
 /* double-cards */
@@ -42,11 +42,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
+
   @include cards;
 
   @media (max-width: 720px) {
     grid-template-columns: 1fr;
   }
-
 }
-

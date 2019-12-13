@@ -1,6 +1,6 @@
 @import './imports';
 
-/*Grid Spacing*/
+/* Grid Spacing */
 $gap-size: 0;
 $gap-size-mobile: 0;
 
@@ -15,17 +15,17 @@ $gap-size-mobile: 0;
 
 body {
   @include body;
+
+  background-color: map-get($colors, backgrounds-color);
 }
 
 nav {
   width: 100%;
-
-  background-color: map-get($colors , navigation-color);
-  /* height: $navs-height; */
+  background-color: map-get($colors, navigation-color);
   height: auto;
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   overflow: hidden;
   box-shadow: $navs-box-shadow;
 }
@@ -43,11 +43,6 @@ nav {
     &:focus { font-weight: $subtitle-font-weight; }
   }
 }
-
-  /*
-  Create classes for divs within the nav bar for left, center and right with variable widths
-    create classes for links, search,  and logo. The class for links must collapse into a menu icon (hamburger icon)"
-  */
 
 header {
   @include grid-1-10-1;
@@ -112,38 +107,37 @@ footer {
 }
 
 .feature-grid-main {
-  @media (min-width: 1025px){
+  @media (min-width: 1025px) {
     display: grid;
     grid-template-columns: 37.5% 62.5%;
     grid-gap: 1em;
   }
 
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
   }
 
-  @media (max-width: 720px){
+  @media (max-width: 720px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
   }
 }
 
-
-
 /* Cards */
 
 .feature-grid-large {
-  @media (min-width: 1025px){
+  @media (min-width: 1025px) {
     grid-row: 1 / 3;
     grid-column: 1 / 3;
     width: 100%;
     height: auto;
     position: relative;
   }
-  @media (max-width: 1024px){
+
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -152,7 +146,7 @@ footer {
   display: grid;
   grid-gap: 1em;
 
-  @media (min-width: 1025px){
+  @media (min-width: 1025px) {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -200,7 +194,6 @@ footer {
   .single-cards > a > span {
     @include cards-link;
   }
-
 }
 
 .double-cards:hover {
@@ -211,26 +204,41 @@ footer {
 
 /* Week Sales */
 
+.cards-hidden-price {
+  display: none;
+  text-decoration: line-through;
+  font-size: $small-text-size;
+  color: map-get($colors, lighter-texts-color);
+}
+
+.cards-hidden-description {
+  display: none;
+  font-size: $small-text-size;
+  padding-bottom: $thin;
+}
+
 .week-sales {
   height: 27em;
 }
 
 .week-sales-cards {
   cursor: pointer;
+
   &:hover {
     height: 23em;
+
     .cards-hidden-price {
       display: block;
     }
 
     .cards-hidden-description {
       display: block;
-      @media ( max-width: 720px) {
+
+      @media (max-width: 720px) {
         display: none;
       }
     }
   }
-
 }
 
 .week-image-container {
@@ -243,15 +251,15 @@ footer {
 }
 
 .week-sales-cards-image {
-width: 80%;
-height: auto;
-margin-left: -30%;
-  @media (max-width: 720px){
+  width: 80%;
+  height: auto;
+  margin-left: -30%;
+
+  @media (max-width: 720px) {
     width: auto;
     height: 80%;
     margin-left: -15%;
   }
-
 }
 
 .week-sales-border {
@@ -261,12 +269,9 @@ margin-left: -30%;
   margin-left: -50%;
 }
 
-.cards-hidden-price {
-  display: none;
-}
-
 .cards-price {
   @include subtitle;
+
   font-size: 22px;
   margin-top: 10%;
 }
@@ -280,19 +285,6 @@ margin-left: -30%;
 .cards-quotes {
   font-size: $small-text-size;
   color: map-get($colors, lighter-texts-color);
-}
-
-.cards-hidden-price {
-  display: none;
-  text-decoration: line-through;
-  font-size: $small-text-size;
-  color: map-get($colors, lighter-texts-color);
-}
-
-.cards-hidden-description {
-  display: none;
-  font-size: $small-text-size;
-  padding-bottom: $thin;
 }
 
 /* Grid Hover Menu */
@@ -319,11 +311,7 @@ margin-left: -30%;
   @include icons;
 }
 
-
 /* Specific Styling not in the framework */
-body {
-  background-color: map-get($colors, backgrounds-color);
-}
 
 h1 {
   @include title;
@@ -331,6 +319,7 @@ h1 {
 
 a {
   @include links;
+
   font-size: $small-text-size;
 }
 
@@ -345,21 +334,24 @@ p {
   padding: map-get($padding, top-only-thin);
 }
 
-.nav-logo , .location{
+.nav-logo,
+.location {
   @include grid-1-2-9;
 }
 
 .ml-logo {
   width: auto;
   height: 35px;
-  @media (max-width: 1024px){
+
+  @media (max-width: 1024px) {
     display: none;
   }
 }
 
 .ml-logo-mobile {
   @include grid-1-2-9;
-  @media (min-width: 1024px){
+
+  @media (min-width: 1024px) {
     display: none;
   }
 }
@@ -369,26 +361,28 @@ p {
   height: 35px;
 }
 
-.nav-search, .links-one {
+.nav-search,
+.links-one {
   @include grid-3-5-4;
 
-.search-bar {
-  display: grid;
-  grid-template-columns: 18fr 1fr;
-  align-items: center;
-  background: white;
-  border-radius: 4px;
-  height: 2.5em;
-  padding-bottom: 3em;
-}
+  .search-bar {
+    display: grid;
+    grid-template-columns: 18fr 1fr;
+    align-items: center;
+    background: white;
+    border-radius: 4px;
+    height: 2.5em;
+    padding-bottom: 3em;
+  }
 
-.ml-search {
-    background: map-get($colors ,inputs-color);
+  .ml-search {
+    background: map-get($colors, inputs-color);
     width: 80%;
     height: 2em;
     border-style: hidden;
     position: relative;
     margin: map-get($margin, left-only-thin);
+
     @media (max-width: 1024px) {
       display: none;
     }
@@ -400,16 +394,15 @@ p {
     color: map-get($colors, lighter-texts-color);
     border-left: 1.5px map-get($colors, lighter-texts-color) solid;
     padding-left: 3px;
-    @media (min-width: 1025px) {
-    }
   }
 }
 
 .nav-christmas {
-  @media (min-width: 1025px){
+  @media (min-width: 1025px) {
     @include grid-8-4-0;
   }
-  @media (max-width: 1024px){
+
+  @media (max-width: 1024px) {
     @include grid-11-1-0;
   }
 }
@@ -421,7 +414,8 @@ p {
 .christmas {
   height: 3em;
   width: auto;
-  @media (max-width: 1024px){
+
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -429,7 +423,8 @@ p {
 .hamburger-menu {
   width: auto;
   height: 30px;
-  @media (min-width: 1024px){
+
+  @media (min-width: 1024px) {
     display: none;
   }
 }
@@ -439,7 +434,8 @@ p {
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   margin: map-get($margin, top-only-thin);
-  @media (max-width: 1024px){
+
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -455,8 +451,8 @@ p {
 .location {
   display: grid;
   grid-template-columns: 1fr 6fr;
+  grid-gap: 0;
 
-  grid-gap: 0px;
   img {
     width: 28px;
     height: auto;
@@ -472,17 +468,15 @@ p {
 }
 
 .nav-location-text-medium {
-margin-top: -12px;;
+  margin-top: -12px;
 }
-
 
 .links-one-item {
   font-size: $small-text-size;
 }
 
-
 .double-card-text {
-z-index: 10;
+  z-index: 10;
 
   .double-card-text-small {
     font-size: $text-size;
@@ -500,17 +494,17 @@ z-index: 10;
     padding-right: 20px;
     padding-left: 20px;
   }
-
 }
 
 .double-card-image {
   z-index: 9;
+
   img {
     width: 132%;
     height: auto;
     margin-left: -4em;
     margin-top: 2.5em;
-  
+
     @media (max-width: 720px) {
       opacity: 0.15;
       margin-top: -40%;
@@ -570,7 +564,6 @@ z-index: 10;
   @media (max-width: 330px) {
     margin-top: 400vw;
   }
-  
 }
 
 /* semi menu */
@@ -578,14 +571,14 @@ z-index: 10;
 .semi-menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: map-get($colors , cards-background-color );
+  background-color: map-get($colors, cards-background-color);
 
   @media (min-width: 1025px) {
     grid-gap: $gap-size;
     margin-top: $thicker;
   }
 
-  @media ( max-width: 1024px ) {
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1.5fr);
     grid-gap: $gap-size-mobile;
     margin-top: ($thicker / 2);
@@ -597,8 +590,8 @@ z-index: 10;
   }
 }
 
-.semi-menu-card { 
-  display: grid; 
+.semi-menu-card {
+  display: grid;
   grid-template-columns: 20%, 80%;
   grid-template-rows: 1fr;
   height: 5em;
@@ -607,6 +600,7 @@ z-index: 10;
     display: none;
   }
 }
+
 .semi-menu-card-image {
   place-self: center;
   grid-column: 1/2;
@@ -620,11 +614,11 @@ z-index: 10;
 }
 
 .semi-menu-card-text-large { margin-bottom: 8px; }
-.semi-menu-card-text-link { padding: map-get( $padding, bottom-only-regular ); }
+.semi-menu-card-text-link { padding: map-get($padding, bottom-only-regular); }
 
 .footer-section {
   margin-top: $thick;
-  background-color: map-get( $colors, cards-background-color);
+  background-color: map-get($colors, cards-background-color);
 
   & > div {
     text-align: center;
@@ -633,31 +627,29 @@ z-index: 10;
     position: relative;
   }
 
-  & > div:before {
+  & > div::before {
     content: "";
     position: absolute;
     top: 45%;
     right: 0;
     height: 15%;
     width: 2px;
-    border-right: 1px solid map-get($colors, divisors-color );
+    border-right: 1px solid map-get($colors, divisors-color);
   }
 
-  & > div:last-child:before {
+  & > div:last-child::before {
     border-right: none;
   }
-}
 
-.footer-section {
   padding-bottom: $regular;
 }
 
 .bottom-footer {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  background-color: map-get( $colors, cards-background-color);
+  background-color: map-get($colors, cards-background-color);
   border-top: 2px map-get($colors, divisors-color) solid;
-  padding: map-get( $padding, no-bottom-thin );
+  padding: map-get($padding, no-bottom-thin);
 }
 
 .footer-sitemap {
@@ -668,9 +660,9 @@ z-index: 10;
 
   a {
     @include subtitle;
+
     font-size: 12px;
   }
-
 }
 
 .footer-copyright {
@@ -689,7 +681,9 @@ z-index: 10;
   border-radius: 5px;
   background-color: #ffe600;
   border: 2px #d9cd4b solid;
+
   @include subtitle;
+
   font-size: $text-size;
   font-weight: $subtitle-font-weight;
   padding: 1px 7px 2px;
@@ -715,8 +709,6 @@ z-index: 10;
   margin-right: $thin;
 }
 
-
-
 .footer-button-text {
   @media (max-width: 1024px) {
     display: none;
@@ -724,16 +716,15 @@ z-index: 10;
 }
 
 .footer-button-logo {
-    height: 2em;
-    width: auto;
-  @media (min-width: 1024px){
+  height: 2em;
+  width: auto;
+
+  @media (min-width: 1024px) {
     display: none;
   }
 }
 
-
-
-/* Non Framework Cards*/
+/* Non Framework Cards */
 .best-stores {
   background-color: map-get($colors, cards-background-color);
   height: auto;
@@ -747,17 +738,18 @@ z-index: 10;
   box-shadow: $cards-box-shadow;
   position: relative;
   overflow: hidden;
+
   &:hover {
     box-shadow: $cards-box-shadow-hover;
   }
 }
 
 .best-stores-background {
-position: absolute;
-top: 0;
-height: auto;
-width: 140%;
-z-index: 15;
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 140%;
+  z-index: 15;
 }
 
 .best-stores-image {
@@ -772,6 +764,7 @@ z-index: 15;
 
 .best-stores-title {
   @include title;
+
   margin-top: 5%;
   cursor: pointer;
   font-size: 22px;
@@ -797,6 +790,7 @@ z-index: 15;
 
 .best-stores-link {
   @include links;
+
   margin-bottom: 10%;
   z-index: 17;
 }

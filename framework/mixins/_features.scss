@@ -6,7 +6,7 @@
   border-radius: $cards-border-radius;
   border-style: solid;
   border-color: map-get($colors, buttons-color);
-  padding: 0.5em 0.5em;;
+  padding: 0.5em 0.5em;
   font-size: $text-size;
   font-weight: $subtitle-font-weight;
 
@@ -21,8 +21,4 @@
 
 @mixin search-fields {
   box-shadow: $cards-box-shadow;
-}
-
-@mixin icons {
-
 }
