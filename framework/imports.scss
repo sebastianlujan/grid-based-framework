@@ -1,0 +1,19 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap');
+
+/* Setups */
+
+@import './setups/_colors';
+@import './setups/_spacing';
+@import './setups/_reset';
+@import './setups/_fonts';
+@import './setups/_components';
+
+/* Mixins */
+@import './mixins/_cards';
+@import './mixins/_containers';
+@import './mixins/_features';
+@import './mixins/_fonts-styling';
+@import './mixins/_grid-positioning';
+@import './mixins/_images';
+@import './mixins/_menues';

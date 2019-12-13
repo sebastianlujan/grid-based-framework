@@ -1,0 +1,42 @@
+/* Grid Hover Menu */
+
+@mixin grid-hover-menu {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  @media (min-width: 1025px) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0;
+    border-radius: $cards-border-radius;
+    box-shadow: $cards-box-shadow;
+    overflow: hidden;
+  }
+}
+
+@mixin grid-hover-menu-item {
+  background-color: map-get($colors, grid-menu-color);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1px map-get($colors, borders-color) solid;
+  cursor: pointer;
+  text-align: center;
+  padding: map-get($padding, top-only-thick);
+
+  & > img {
+    width: auto;
+    height: 45px;
+  }
+
+  &:hover {
+    background-color: map-get($colors, grid-menu-color-hover);
+    border: 1px map-get($colors, grid-menu-color) solid;
+
+    & > img {
+      filter: grayscale(1) brightness(3);
+    }
+
+    p { color: map-get($colors, grid-menu-color); }
+  }
+}

@@ -1,0 +1,793 @@
+@import './imports';
+
+/* Grid Spacing */
+$gap-size: 0;
+$gap-size-mobile: 0;
+
+/* Grid */
+@mixin body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Classes */
+
+body {
+  @include body;
+
+  background-color: map-get($colors, backgrounds-color);
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  background-color: map-get($colors, navigation-color);
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: $navs-box-shadow;
+}
+
+.nav-links {
+  @include grid-8-4-0;
+
+  .nav-links-item {
+    font-family: $text-font-family;
+    font-size: $text-size;
+    font-weight: $text-font-weight;
+
+    &:hover { font-weight: $subtitle-font-weight; }
+
+    &:focus { font-weight: $subtitle-font-weight; }
+  }
+}
+
+header {
+  @include grid-1-10-1;
+}
+
+main {
+  @include grid-1-10-1;
+}
+
+footer {
+  @include grid-0-12-0;
+}
+
+/* Text */
+
+.title {
+  @include title;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.text {
+  @include text;
+}
+
+.links {
+  @include links;
+}
+
+/* Images */
+
+.single-cards-img {
+  @include single-cards-img;
+}
+
+.double-cards-img {
+  @include double-cards-img;
+}
+
+/* Containers */
+
+.line-of-two {
+  @include line-of-two;
+}
+
+.line-of-three {
+  @include line-of-three;
+}
+
+.line-of-four {
+  @include line-of-four;
+}
+
+.line-of-five {
+  @include line-of-five;
+}
+
+.line-of-six {
+  @include line-of-six;
+}
+
+.feature-grid-main {
+  @media (min-width: 1025px) {
+    display: grid;
+    grid-template-columns: 37.5% 62.5%;
+    grid-gap: 1em;
+  }
+
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  @media (max-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+}
+
+/* Cards */
+
+.feature-grid-large {
+  @media (min-width: 1025px) {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.feature-grid-right {
+  display: grid;
+  grid-gap: 1em;
+
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feature-grid-large-image {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-bottom: 4.75em;
+}
+
+.feature-grid-text-small {
+  font-weight: bold;
+  position: absolute;
+  bottom: 0.5em;
+  left: 1em;
+}
+
+.feature-grid-small-image {
+  width: 100%;
+  height: auto;
+}
+
+.single-cards {
+  @include single-cards;
+}
+
+.double-cards {
+  @include double-cards;
+}
+
+.cards-link {
+  @include cards-link;
+}
+
+.single-cards:hover {
+  .single-cards > a > span {
+    @include cards-link;
+  }
+}
+
+.double-cards:hover {
+  .double-cards > a > span {
+    @include cards-link;
+  }
+}
+
+/* Week Sales */
+
+.cards-hidden-price {
+  display: none;
+  text-decoration: line-through;
+  font-size: $small-text-size;
+  color: map-get($colors, lighter-texts-color);
+}
+
+.cards-hidden-description {
+  display: none;
+  font-size: $small-text-size;
+  padding-bottom: $thin;
+}
+
+.week-sales {
+  height: 27em;
+}
+
+.week-sales-cards {
+  cursor: pointer;
+
+  &:hover {
+    height: 23em;
+
+    .cards-hidden-price {
+      display: block;
+    }
+
+    .cards-hidden-description {
+      display: block;
+
+      @media (max-width: 720px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.week-image-container {
+  width: 100%;
+  height: 13em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.week-sales-cards-image {
+  width: 80%;
+  height: auto;
+  margin-left: -30%;
+
+  @media (max-width: 720px) {
+    width: auto;
+    height: 80%;
+    margin-left: -15%;
+  }
+}
+
+.week-sales-border {
+  width: 300%;
+  height: 1px;
+  background: map-get($colors, borders-color);
+  margin-left: -50%;
+}
+
+.cards-price {
+  @include subtitle;
+
+  font-size: 22px;
+  margin-top: 10%;
+}
+
+.cards-discount {
+  font-size: $small-text-size;
+  color: map-get($colors, alt-texts-color);
+  font-weight: $subtitle-font-weight;
+}
+
+.cards-quotes {
+  font-size: $small-text-size;
+  color: map-get($colors, lighter-texts-color);
+}
+
+/* Grid Hover Menu */
+
+.grid-hover-menu {
+  @include grid-hover-menu;
+}
+
+.grid-hover-menu-item {
+  @include grid-hover-menu-item;
+}
+
+/* Components */
+
+.buttons {
+  @include buttons;
+}
+
+.search-fields {
+  @include search-fields;
+}
+
+/* Specific Styling not in the framework */
+
+h1 {
+  @include title;
+}
+
+a {
+  @include links;
+
+  font-size: $small-text-size;
+}
+
+p {
+  @include text;
+}
+
+.top-nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  padding: map-get($padding, top-only-thin);
+}
+
+.nav-logo,
+.location {
+  @include grid-1-2-9;
+}
+
+.ml-logo {
+  width: auto;
+  height: 35px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.ml-logo-mobile {
+  @include grid-1-2-9;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.logo-mobile {
+  width: auto;
+  height: 35px;
+}
+
+.nav-search,
+.links-one {
+  @include grid-3-5-4;
+
+  .search-bar {
+    display: grid;
+    grid-template-columns: 18fr 1fr;
+    align-items: center;
+    background: white;
+    border-radius: 4px;
+    height: 2.5em;
+    padding-bottom: 3em;
+  }
+
+  .ml-search {
+    background: map-get($colors, inputs-color);
+    width: 80%;
+    height: 2em;
+    border-style: hidden;
+    position: relative;
+    margin: map-get($margin, left-only-thin);
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .ml-search-icon {
+    font-family: "Fericons";
+    font-weight: bolder;
+    color: map-get($colors, lighter-texts-color);
+    border-left: 1.5px map-get($colors, lighter-texts-color) solid;
+    padding-left: 3px;
+  }
+}
+
+.nav-christmas {
+  @media (min-width: 1025px) {
+    @include grid-8-4-0;
+  }
+
+  @media (max-width: 1024px) {
+    @include grid-11-1-0;
+  }
+}
+
+.links-two {
+  @include grid-8-4-0;
+}
+
+.christmas {
+  height: 3em;
+  width: auto;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.hamburger-menu {
+  width: auto;
+  height: 30px;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  margin: map-get($margin, top-only-thin);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.grid-menu-main {
+  @include grid-hover-menu;
+}
+
+.grid-menu-item {
+  @include grid-hover-menu-item;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 0;
+
+  img {
+    width: 28px;
+    height: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-top: -20%;
+  }
+}
+
+.nav-location-text-small {
+  font-size: $small-text-size;
+  margin-top: -3%;
+}
+
+.nav-location-text-medium {
+  margin-top: -12px;
+}
+
+.links-one-item {
+  font-size: $small-text-size;
+}
+
+.double-card-text {
+  z-index: 10;
+
+  .double-card-text-small {
+    font-size: $text-size;
+    font-weight: $title-font-weight;
+    letter-spacing: 0.1em;
+    margin-top: 5em;
+  }
+
+  .double-card-text-large {
+    font-size: $subtitle-size;
+    font-weight: $title-font-weight;
+  }
+
+  .double-card-text-button {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.double-card-image {
+  z-index: 9;
+
+  img {
+    width: 132%;
+    height: auto;
+    margin-left: -4em;
+    margin-top: 2.5em;
+
+    @media (max-width: 720px) {
+      opacity: 0.15;
+      margin-top: -40%;
+    }
+  }
+}
+
+.margin-top-thicker {
+  @media (min-width: 1025px) {
+    margin-top: 2vw;
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 45vw;
+  }
+
+  @media (max-width: 720px) {
+    margin-top: 230vw;
+  }
+
+  @media (max-width: 585px) {
+    margin-top: 250vw;
+  }
+
+  @media (max-width: 540px) {
+    margin-top: 270vw;
+  }
+
+  @media (max-width: 540px) {
+    margin-top: 290vw;
+  }
+
+  @media (max-width: 465px) {
+    margin-top: 310vw;
+  }
+
+  @media (max-width: 435px) {
+    margin-top: 330vw;
+  }
+
+  @media (max-width: 410px) {
+    margin-top: 350vw;
+  }
+
+  @media (max-width: 390px) {
+    margin-top: 370vw;
+  }
+
+  @media (max-width: 365px) {
+    margin-top: 390vw;
+  }
+
+  @media (max-width: 345px) {
+    margin-top: 390vw;
+  }
+
+  @media (max-width: 330px) {
+    margin-top: 400vw;
+  }
+}
+
+/* semi menu */
+
+.semi-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: map-get($colors, cards-background-color);
+
+  @media (min-width: 1025px) {
+    grid-gap: $gap-size;
+    margin-top: $thicker;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1.5fr);
+    grid-gap: $gap-size-mobile;
+    margin-top: ($thicker / 2);
+  }
+
+  @media (max-width: 720px) {
+    grid-gap: $gap-size-mobile;
+    visibility: hidden;
+  }
+}
+
+.semi-menu-card {
+  display: grid;
+  grid-template-columns: 20%, 80%;
+  grid-template-rows: 1fr;
+  height: 5em;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+.semi-menu-card-image {
+  place-self: center;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.semi-menu-card-text {
+  grid-column: 2/3;
+}
+
+.semi-menu-card-text-large { margin-bottom: 8px; }
+.semi-menu-card-text-link { padding: map-get($padding, bottom-only-regular); }
+
+.footer-section {
+  margin-top: $thick;
+  background-color: map-get($colors, cards-background-color);
+
+  & > div {
+    text-align: center;
+    padding: $regular;
+    margin-top: $thick;
+    position: relative;
+  }
+
+  & > div::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+    height: 15%;
+    width: 2px;
+    border-right: 1px solid map-get($colors, divisors-color);
+  }
+
+  & > div:last-child::before {
+    border-right: none;
+  }
+
+  padding-bottom: $regular;
+}
+
+.bottom-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  background-color: map-get($colors, cards-background-color);
+  border-top: 2px map-get($colors, divisors-color) solid;
+  padding: map-get($padding, no-bottom-thin);
+}
+
+.footer-sitemap {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+
+  a {
+    @include subtitle;
+
+    font-size: 12px;
+  }
+}
+
+.footer-copyright {
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+  font-size: $text-size;
+  font-weight: $subtitle-font-weight;
+  letter-spacing: 1px;
+  color: map-get($colors, light-texts-color);
+  margin-top: -0.1%;
+}
+
+.footer-button {
+  grid-column: 3 / 4;
+  height: 3em;
+  border-radius: 5px;
+  background-color: #ffe600;
+  border: 2px #d9cd4b solid;
+
+  @include subtitle;
+
+  font-size: $text-size;
+  font-weight: $subtitle-font-weight;
+  padding: 1px 7px 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+
+  @media (max-width: 720) {
+    width: 35%;
+  }
+}
+
+.footer-button-icon {
+  height: 2em;
+  width: auto;
+  margin-right: $thin;
+}
+
+.footer-button-text {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.footer-button-logo {
+  height: 2em;
+  width: auto;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+/* Non Framework Cards */
+.best-stores {
+  background-color: map-get($colors, cards-background-color);
+  height: auto;
+  width: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: $cards-border-radius;
+  margin-top: $regular;
+  box-shadow: $cards-box-shadow;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: $cards-box-shadow-hover;
+  }
+}
+
+.best-stores-background {
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 140%;
+  z-index: 15;
+}
+
+.best-stores-image {
+  width: 27%;
+  height: auto;
+  border-radius: $cards-border-radius;
+  border: $single-cards-border-width map-get($colors, borders-color) solid;
+  margin-top: 20%;
+  cursor: pointer;
+  z-index: 17;
+}
+
+.best-stores-title {
+  @include title;
+
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 17;
+}
+
+.best-stores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 2% 0 10% 0;
+  z-index: 17;
+}
+
+.best-stores-grid-items {
+  width: 85%;
+  height: auto;
+  border-radius: $cards-border-radius;
+  border: $single-cards-border-width map-get($colors, borders-color) solid;
+  cursor: pointer;
+  z-index: 17;
+}
+
+.best-stores-link {
+  @include links;
+
+  margin-bottom: 10%;
+  z-index: 17;
+}
