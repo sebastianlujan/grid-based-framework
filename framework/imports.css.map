@@ -14,8 +14,7 @@
         "mixins/_fonts-styling.scss",
         "mixins/_grid-positioning.scss",
         "mixins/_images.scss",
-        "mixins/_menues.scss",
-        "setups/_colors.scss"
+        "mixins/_menues.scss"
     ],
     "names": [],
     "file": "imports.css"

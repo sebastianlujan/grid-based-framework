@@ -17,6 +17,7 @@ body {
   @include body;
 
   background-color: map-get($colors, backgrounds-color);
+  overflow-x: hidden;
 }
 
 nav {
@@ -305,10 +306,6 @@ footer {
 
 .search-fields {
   @include search-fields;
-}
-
-.icons {
-  @include icons;
 }
 
 /* Specific Styling not in the framework */
