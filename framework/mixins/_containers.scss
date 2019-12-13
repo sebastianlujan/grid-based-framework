@@ -123,6 +123,4 @@
 @mixin feature-grid-large {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
-
-  @include cards;
 }
