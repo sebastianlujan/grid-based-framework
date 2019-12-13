@@ -32,7 +32,7 @@ body {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
+  -ms-grid-columns: (1fr) [12];
   grid-template-columns: repeat(12, 1fr);
   background-color: #ebebeb;
   overflow-x: hidden;
@@ -142,7 +142,7 @@ footer {
   .line-of-two {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: (1fr) [2];
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0;
   }
@@ -172,7 +172,7 @@ footer {
   .line-of-three {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: (1fr) [3];
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0;
   }
@@ -203,7 +203,7 @@ footer {
   display: grid;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  -ms-grid-columns: (1fr)[4];
+  -ms-grid-columns: (1fr) [4];
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -263,7 +263,7 @@ footer {
   .line-of-six {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[6];
+    -ms-grid-columns: (1fr) [6];
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 0;
   }
@@ -273,7 +273,7 @@ footer {
   .line-of-six {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (1fr)[2];
+    -ms-grid-rows: (1fr) [2];
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 0;
   }
@@ -348,22 +348,22 @@ footer {
 
 @media (min-width: 1025px) {
   .feature-grid-right {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 1024px) {
   .feature-grid-right {
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: (1fr) [3];
         grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 720px) {
   .feature-grid-right {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -406,7 +406,7 @@ footer {
 .double-cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: (1fr) [2];
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -565,7 +565,7 @@ footer {
   .grid-hover-menu {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[7];
+    -ms-grid-columns: (1fr) [7];
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 0;
     border-radius: 4px;
@@ -660,7 +660,7 @@ p {
 .top-nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
+  -ms-grid-columns: (1fr) [12];
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   padding: 0.8em 0 0 0;
@@ -796,7 +796,7 @@ p {
 .bottom-nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
+  -ms-grid-columns: (1fr) [12];
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   margin: 0.8em 0 0 0;
@@ -818,7 +818,7 @@ p {
   .grid-menu-main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[7];
+    -ms-grid-columns: (1fr) [7];
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 0;
     border-radius: 4px;
@@ -1025,7 +1025,7 @@ p {
 
 @media (max-width: 1024px) {
   .semi-menu {
-    -ms-grid-columns: (1.5fr)[2];
+    -ms-grid-columns: (1.5fr) [2];
     grid-template-columns: repeat(2, 1.5fr);
     grid-gap: 0;
     margin-top: 4em;
@@ -1126,7 +1126,7 @@ p {
   display: grid;
   -ms-grid-columns: 2fr 2fr 2fr 1fr;
   grid-template-columns: 2fr 2fr 2fr 1fr;
-  -ms-grid-rows: (1fr)[2];
+  -ms-grid-rows: (1fr) [2];
   grid-template-rows: repeat(2, 1fr);
 }
 
@@ -1278,7 +1278,7 @@ p {
 .best-stores-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: (1fr) [3];
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
   margin: 2% 0 10% 0;
