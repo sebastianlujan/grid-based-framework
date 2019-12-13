@@ -36,6 +36,29 @@ You can find the original project specification at:
 
  As a final note, SCSS is required to use this framework, since there is NOT a compiled version in plain CSS.
 
+ # Positioning
+
+ For our breakpoints que used 0 to 720px, 721 to 1024px and 1025px onwards, which kind be modified in the SCSS File called _containers within the mixins directory which will define the behavior of each container when collapsing. 
+
+ For default, containers will collapse to one column in less than 720px and two columns within 721px to 1024px.
+ 
+ For positioning we use a combination of two classes the first will define the content of our container, and the second will define the width and horizontal position of the container in the general grid.
+
+ For the containers we use:
+ - line-of-two
+ - line-of-three
+ - line-of-four
+ - line-of-five
+ - line-of-six
+
+ For the horizontal position and width we will used the previously explained x-y-z format where x+y+x must be always equal to 12.
+
+ Here are a few examples:
+
+ ![screen2](./images/breakpoints.png)
+
+
+
  # Authors
 
 - [Sebastían Luján] (https://github.com/sebastianlujan)
