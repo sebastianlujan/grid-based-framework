@@ -51,7 +51,7 @@ You can find the original project specification at:
  - line-of-five
  - line-of-six
 
- For the horizontal position and width we will used the previously explained x-y-z format where x+y+x must be always equal to 12.
+ For the horizontal position and width we will use the previously explained x-y-z format where x+y+x must be always equal to 12.
 
  Here are a few examples:
 
